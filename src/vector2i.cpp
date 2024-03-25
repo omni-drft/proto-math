@@ -20,7 +20,20 @@ void pm::Vector2i::setY(int y) {
     this->y = y;
 }
 
-void pm::Vector2i::print() const {
-    std::cout << "(" << x << ", " << y << ")" << std::endl;
+void pm::Vector2i::print(pmEnum mode) const {
+    switch (mode) {
+        case PM_PRINT_DEFAULT:
+            std::cout << "(" << x << ", " << y << ")" << std::endl;
+            break;
+        case PM_PRINT_SIMPLEST:
+            std::cout << x << " " << y << std::endl;
+            break;
+        case PM_PRINT_POLAR:
+            std::cout << "TODO: Implement polar print mode" << std::endl;
+            break;
+        default:
+            std::cout << "Invalid print mode" << std::endl;
+            break;
+    }
 }
 

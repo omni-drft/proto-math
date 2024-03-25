@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\dev\\C\u002B\u002B\\proto-math\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{521AAA5D-3EFE-6AB3-A75E-650693615535}|proto-math-library.vcxproj|F:\\dev\\C\u002B\u002B\\proto-math\\premake5.lua||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{521AAA5D-3EFE-6AB3-A75E-650693615535}|proto-math-library.vcxproj|solutionrelative:premake5.lua||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90F01DBE-7CE9-3C10-A51B-229591731C1C}|proto-math-tests.vcxproj|F:\\dev\\C\u002B\u002B\\proto-math\\tests\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{90F01DBE-7CE9-3C10-A51B-229591731C1C}|proto-math-tests.vcxproj|solutionrelative:tests\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{521AAA5D-3EFE-6AB3-A75E-650693615535}|proto-math-library.vcxproj|F:\\dev\\C\u002B\u002B\\proto-math\\src\\vector2i.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{521AAA5D-3EFE-6AB3-A75E-650693615535}|proto-math-library.vcxproj|solutionrelative:src\\vector2i.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{521AAA5D-3EFE-6AB3-A75E-650693615535}|proto-math-library.vcxproj|F:\\dev\\C\u002B\u002B\\proto-math\\include\\Enum.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{521AAA5D-3EFE-6AB3-A75E-650693615535}|proto-math-library.vcxproj|solutionrelative:include\\Enum.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{521AAA5D-3EFE-6AB3-A75E-650693615535}|proto-math-library.vcxproj|F:\\dev\\C\u002B\u002B\\proto-math\\include\\vector2i.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{521AAA5D-3EFE-6AB3-A75E-650693615535}|proto-math-library.vcxproj|solutionrelative:include\\vector2i.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 239,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +39,71 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "premake5.lua",
+              "DocumentMoniker": "F:\\dev\\C\u002B\u002B\\proto-math\\premake5.lua",
+              "RelativeDocumentMoniker": "premake5.lua",
+              "ToolTip": "F:\\dev\\C\u002B\u002B\\proto-math\\premake5.lua",
+              "RelativeToolTip": "premake5.lua",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-25T23:24:34.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Enum.hpp",
+              "DocumentMoniker": "F:\\dev\\C\u002B\u002B\\proto-math\\include\\Enum.hpp",
+              "RelativeDocumentMoniker": "include\\Enum.hpp",
+              "ToolTip": "F:\\dev\\C\u002B\u002B\\proto-math\\include\\Enum.hpp",
+              "RelativeToolTip": "include\\Enum.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-25T23:21:17.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "vector2i.cpp",
+              "DocumentMoniker": "F:\\dev\\C\u002B\u002B\\proto-math\\src\\vector2i.cpp",
+              "RelativeDocumentMoniker": "src\\vector2i.cpp",
+              "ToolTip": "F:\\dev\\C\u002B\u002B\\proto-math\\src\\vector2i.cpp",
+              "RelativeToolTip": "src\\vector2i.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-25T23:20:03.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "vector2i.hpp",
+              "DocumentMoniker": "F:\\dev\\C\u002B\u002B\\proto-math\\include\\vector2i.hpp",
+              "RelativeDocumentMoniker": "include\\vector2i.hpp",
+              "ToolTip": "F:\\dev\\C\u002B\u002B\\proto-math\\include\\vector2i.hpp",
+              "RelativeToolTip": "include\\vector2i.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-25T23:19:20.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "F:\\dev\\C\u002B\u002B\\proto-math\\tests\\Main.cpp",
+              "RelativeDocumentMoniker": "tests\\Main.cpp",
+              "ToolTip": "F:\\dev\\C\u002B\u002B\\proto-math\\tests\\Main.cpp",
+              "RelativeToolTip": "tests\\Main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-25T23:16:21.168Z",
+              "EditorCaption": ""
             }
           ]
         },

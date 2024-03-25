@@ -20,3 +20,23 @@ project "proto-math-library"
     filter "configurations:Release"
         defines { "NDEBUG" }
         optimize "On"
+
+project "proto-math-tests"
+    kind "ConsoleApp"
+    language "C++"
+    cppdialect "C++17"
+    targetdir "test-bin/%{cfg.buildcfg}"
+    
+    files { "tests/*.cpp" }
+
+    includedirs { "include" }
+
+    links { "proto-math-library" }
+
+    filter "configurations:Debug"
+        defines { "DEBUG" }
+        symbols "On"
+
+    filter "configurations:Release"
+        defines { "NDEBUG" }
+        optimize "On"

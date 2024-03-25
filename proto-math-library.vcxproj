@@ -41,13 +41,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>lib\Release\</OutDir>
-    <IntDir>obj\x64\Release\</IntDir>
+    <IntDir>obj\x64\Release\proto-math-library\</IntDir>
     <TargetName>proto-math-library</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>lib\Debug\</OutDir>
-    <IntDir>obj\x64\Debug\</IntDir>
+    <IntDir>obj\x64\Debug\proto-math-library\</IntDir>
     <TargetName>proto-math-library</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
@@ -88,6 +88,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\Enum.hpp" />
     <ClInclude Include="include\vector2i.hpp" />
   </ItemGroup>
   <ItemGroup>

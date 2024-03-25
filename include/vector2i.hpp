@@ -3,7 +3,11 @@
 
 #include <iostream>
 
+#include "Enum.hpp"
+
 namespace pm {
+
+
     class Vector2i {
         public:
             Vector2i();
@@ -15,7 +19,7 @@ namespace pm {
             void setX(int x);
             void setY(int y);
 
-            void print() const;
+            void print(pmEnum mode = PM_PRINT_DEFAULT) const;
         
         private:
             int x;

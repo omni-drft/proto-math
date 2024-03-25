@@ -1,0 +1,5 @@
+enum pmEnum {
+	PM_PRINT_DEFAULT,
+	PM_PRINT_SIMPLEST,
+	PM_PRINT_POLAR
+};
