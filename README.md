@@ -1,2 +1,2 @@
 # proto-math
-C++ math library for various kinds of operations
+Multi-purpose C++ math library
