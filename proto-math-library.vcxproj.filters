@@ -20,5 +20,7 @@
     <ClCompile Include="src\vector2i.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="include\vector2f.hpp" />
+    <ClCompile Include="src\vector2f.cpp" />
   </ItemGroup>
 </Project>

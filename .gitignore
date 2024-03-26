@@ -37,4 +37,4 @@
 
 .vs/
 .vscode/
-.obj/
+obj/

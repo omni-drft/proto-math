@@ -92,6 +92,8 @@
     <ClInclude Include="include\vector2i.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\vector2f.cpp" />
+    <ClCompile Include="include\vector2f.hpp" />
     <ClCompile Include="src\vector2i.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
