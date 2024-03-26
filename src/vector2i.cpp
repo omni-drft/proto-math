@@ -46,3 +46,46 @@ int pm::Vector2i::print(pmEnum mode) const
     return 0;
 }
 
+pm::Vector2i pm::Vector2i::operator+(const Vector2i& other) const
+{
+    pm::Vector2i result;
+    result.setX(this->getX() + other.getX());
+    result.setY(this->getY() + other.getY());
+    return result;
+}
+
+pm::Vector2i pm::Vector2i::operator-(const Vector2i& other) const
+{
+    pm::Vector2i result;
+    result.setX(this->getX() - other.getX());
+    result.setY(this->getY() - other.getY());
+    return result;
+}
+
+pm::Vector2i pm::Vector2i::operator*(int scalar) const
+{
+    pm::Vector2i result;
+    result.setX(this->getX() * scalar);
+    result.setY(this->getY() * scalar);
+    return result;
+}
+
+pm::Vector2i pm::Vector2i::operator/(int scalar) const
+{
+    pm::Vector2i result;
+    result.setX(this->getX() / scalar);
+    result.setY(this->getY() / scalar);
+    return result;
+}
+
+pm::Vector2i pm::vector2i::dotProduct(const Vector2i& vector1, const Vector2i& vector2)
+{
+    std::cout << "TODO: Implement dot product for Vector2i" << std::endl;
+    return Vector2i();
+}
+
+pm::Vector2i pm::vector2i::crossProduct(const Vector2i& vector1, const Vector2i& vector2)
+{
+    std::cout << "TODO: Implement cross product for Vector2i" << std::endl;
+    return Vector2i();
+}

@@ -74,6 +74,34 @@ namespace pm
             /// </param>
             /// <returns>Error codes for the operation. 0 if succesful, !=0 if error</returns>
             int print(pmEnum mode = PM_PRINT_DEFAULT) const;
+
+            /// <summary>
+            /// Enables simple addition of two vectors in the form of vector1 + vector2 using operator overloading.
+            /// </summary>
+            /// <param name="other>The vector that will be added to the current vector.</param>
+            /// <returns>Sum of 2 vectors.</returns>
+            Vector2i operator+(const Vector2i& other) const;
+
+            /// <summary>
+            /// Enables simple subtraction of two vectors in the form of vector1 - vector2 using operator overloading.
+            /// </summary>
+            /// <param name="other">The vector that will be subtracted from the current vector</param>
+            /// <returns>Difference between two vectors as a vector.</returns>
+            Vector2i operator-(const Vector2i& other) const;
+
+            /// <summary>
+            /// Enables simple multiplication of a vector by a scalar in the form of vector * scalar using operator overloading.
+            /// </summary>
+            /// <param name="scalar">The scalar that will be multiplied by the vector.</param
+            /// <returns> The result of the multiplication as a vector.</returns>
+            Vector2i operator*(int scalar) const;
+
+            /// <summary>
+            /// Enables simple division of a vector by a scalar in the form of vector / scalar using operator overloading.
+            /// </summary>
+            /// <param name="scalar"> The scalar that will divide the vector.</param>
+            /// <returns> The result of the division as a vector.</returns>
+            Vector2i operator/(int scalar) const;
         
         private:
             /// <summary>
@@ -86,6 +114,17 @@ namespace pm
             /// </summary>
             int y;
     };
+
+    /// <summary>
+    /// A namespace that contains functions for vector2i manipulation.
+    /// </summary>
+    namespace vector2i
+    {
+        Vector2i dotProduct(const Vector2i& vector1, const Vector2i& vector2);
+
+        Vector2i crossProduct(const Vector2i& vector1, const Vector2i& vector2);
+    }
+
 }
 
 #endif // VECTOR2I_HPP
