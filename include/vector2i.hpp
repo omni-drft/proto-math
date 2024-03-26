@@ -1,11 +1,3 @@
-/**
-* @file Vector2i.hpp
-* @brief The Vector2i class definition.
-* 
-* This file contains the Vector2i class. It is a class that represents a 2D vector with integer components.
-* The implementation of all member methods is done in src/Vector2i.cpp. 
-*/
-
 #ifndef VECTOR2I_HPP
 #define VECTOR2I_HPP
 
@@ -17,13 +9,15 @@
 /// Namespace pm is the main namespace for the ProtoMath library.
 /// It contains all the classes and functions of the library.
 /// </summary>
-namespace pm {
+namespace pm 
+    {
 
     /// <summary>
     /// Vector2i is a class that represents a 2D vector with integer components.
     /// It provides essential features for 2D vector manipulation.
     /// </summary>
-    class Vector2i {
+    class Vector2i 
+    {
         public:
             /// <summary>
             /// The empty constructor creates a new Vector2i with both components set to 0.
@@ -53,13 +47,15 @@ namespace pm {
             /// X coordinate setter.
             /// </summary>
             /// <param name="x"> - Value that will be set as X coordinate</param>
-            void setX(int x);
+            /// <returns>Error codes for the operation. 0 if succesful, !=0 if error</returns>
+            int setX(int x);
 
             /// <summary>
             /// Y coordinate setter.
             /// </summary>
             /// <param name="y"> - Value that will be set as Y coordinate</param>
-            void setY(int y);
+            /// <returns>Error codes for the operation. 0 if succesful, !=0 if error</returns>
+            int setY(int y);
 
             /// <summary>
             /// Print method that outputs the vector to the console in different formats.
@@ -76,7 +72,8 @@ namespace pm {
             /// PM_PRINT_POLAR - Prints the vector in the format "(r, angle)\n".
             /// </para>
             /// </param>
-            void print(pmEnum mode = PM_PRINT_DEFAULT) const;
+            /// <returns>Error codes for the operation. 0 if succesful, !=0 if error</returns>
+            int print(pmEnum mode = PM_PRINT_DEFAULT) const;
         
         private:
             /// <summary>

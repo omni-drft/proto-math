@@ -1,36 +1,36 @@
-/**
-* @file vector2i.cpp
-* @brief Implementation of the Vector2i class member methods
-* 
-* This file contains the implementation of the Vector2i class member methods.
-*/
-
 #include "vector2i.hpp"
 
 pm::Vector2i::Vector2i() : x(0), y(0) {}
 
 pm::Vector2i::Vector2i(int x, int y) : x(x), y(y) {}
 
-int pm::Vector2i::getX() const {
+int pm::Vector2i::getX() const 
+{
     return x;
 }
 
-int pm::Vector2i::getY() const {
+int pm::Vector2i::getY() const 
+{
     return y;
 }
 
-void pm::Vector2i::setX(int x) {
+int pm::Vector2i::setX(int x) 
+{
     this->x = x;
+    return 0;
 }
 
-void pm::Vector2i::setY(int y) {
+int pm::Vector2i::setY(int y) 
+{
     this->y = y;
+    return 0;
 }
 
-void pm::Vector2i::print(pmEnum mode) const {
+int pm::Vector2i::print(pmEnum mode) const 
+{
     switch (mode) {
         case PM_PRINT_DEFAULT:
-            std::cout << "(" << x << ", " << y << ")" << std::endl;
+            std::cout << "( " << x << ", " << y << " )" << std::endl;
             break;
         case PM_PRINT_SIMPLEST:
             std::cout << x << " " << y << std::endl;
@@ -40,7 +40,9 @@ void pm::Vector2i::print(pmEnum mode) const {
             break;
         default:
             std::cout << "Invalid print mode" << std::endl;
+            return 1;
             break;
     }
+    return 0;
 }
 
