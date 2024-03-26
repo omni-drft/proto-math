@@ -1,3 +1,10 @@
+/**
+* @file pmEnum.h
+* @brief This files contains only the enum pmEnum.
+* 
+* This file defines the enum pmEnum, which contains various flags that are used across the library.
+*/
+
 /// <summary>
 /// The enum pmEnum is used to define different parameters across the library.
 /// 

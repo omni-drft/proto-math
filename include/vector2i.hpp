@@ -1,3 +1,11 @@
+/**
+* @file Vector2i.hpp
+* @brief The Vector2i class definition.
+* 
+* This file contains the Vector2i class. It is a class that represents a 2D vector with integer components.
+* The implementation of all member methods is done in src/Vector2i.cpp. 
+*/
+
 #ifndef VECTOR2I_HPP
 #define VECTOR2I_HPP
 

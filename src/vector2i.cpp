@@ -1,3 +1,10 @@
+/**
+* @file vector2i.cpp
+* @brief Implementation of the Vector2i class member methods
+* 
+* This file contains the implementation of the Vector2i class member methods.
+*/
+
 #include "vector2i.hpp"
 
 pm::Vector2i::Vector2i() : x(0), y(0) {}

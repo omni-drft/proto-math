@@ -1,0 +1,38 @@
+\begin{theindex}
+
+  \item {getX}
+    \subitem {pm::Vector2i}, \hyperpage{10}
+  \item {getY}
+    \subitem {pm::Vector2i}, \hyperpage{10}
+
+  \indexspace
+
+  \item {include/Enum.hpp}, \hyperpage{13}
+  \item {include/vector2i.hpp}, \hyperpage{13, 14}
+
+  \indexspace
+
+  \item {pm}, \hyperpage{7}
+  \item {pm::Vector2i}, \hyperpage{9}
+    \subitem {getX}, \hyperpage{10}
+    \subitem {getY}, \hyperpage{10}
+    \subitem {print}, \hyperpage{10}
+    \subitem {setX}, \hyperpage{10}
+    \subitem {setY}, \hyperpage{11}
+    \subitem {Vector2i}, \hyperpage{9}
+  \item {print}
+    \subitem {pm::Vector2i}, \hyperpage{10}
+
+  \indexspace
+
+  \item {setX}
+    \subitem {pm::Vector2i}, \hyperpage{10}
+  \item {setY}
+    \subitem {pm::Vector2i}, \hyperpage{11}
+
+  \indexspace
+
+  \item {Vector2i}
+    \subitem {pm::Vector2i}, \hyperpage{9}
+
+\end{theindex}
