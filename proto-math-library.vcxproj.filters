@@ -12,7 +12,7 @@
     <ClInclude Include="include\vector2i.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\Enum.hpp">
+    <ClInclude Include="include\globals.hpp">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

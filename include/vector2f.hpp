@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-#include "Enum.hpp"
+#include "globals.hpp"
 
 namespace pm
 {
