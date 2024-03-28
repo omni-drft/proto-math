@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 namespace pm 
 {
 	template <typename T>
@@ -21,4 +23,5 @@ namespace pm
 		T* components;
 		size_t vecSize;
 	};
+
 }

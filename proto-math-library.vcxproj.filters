@@ -9,10 +9,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\vec.hpp">
+    <ClInclude Include="include\globals.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\globals.hpp">
+    <ClInclude Include="include\vec.hpp">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
