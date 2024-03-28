@@ -89,10 +89,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\globals.hpp" />
-    <ClInclude Include="include\vector.hpp" />
+    <ClInclude Include="include\vec.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\vector.cpp" />
+    <ClCompile Include="src\vec.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

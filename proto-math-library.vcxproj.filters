@@ -9,7 +9,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\vector.hpp">
+    <ClInclude Include="include\vec.hpp">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\globals.hpp">
@@ -17,7 +17,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\vector.cpp">
+    <ClCompile Include="src\vec.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
