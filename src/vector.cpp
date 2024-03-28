@@ -1,32 +1,32 @@
-#include "vector2i.hpp"
+#include "vector.hpp"
 
-pm::Vector2i::Vector2i() : x(0), y(0) {}
+pm::Vector::Vector() : x(0), y(0) {}
 
-pm::Vector2i::Vector2i(int x, int y) : x(x), y(y) {}
+pm::Vector::Vector(int x, int y) : x(x), y(y) {}
 
-int pm::Vector2i::getX() const 
+int pm::Vector::getX() const 
 {
     return x;
 }
 
-int pm::Vector2i::getY() const 
+int pm::Vector::getY() const 
 {
     return y;
 }
 
-int pm::Vector2i::setX(int x) 
+int pm::Vector::setX(int x) 
 {
     this->x = x;
     return 0;
 }
 
-int pm::Vector2i::setY(int y) 
+int pm::Vector::setY(int y) 
 {
     this->y = y;
     return 0;
 }
 
-int pm::Vector2i::print(pmEnum mode) const 
+int pm::Vector::print(pmEnum mode) const 
 {
     switch (mode) {
         case PM_PRINT_DEFAULT:
@@ -46,58 +46,58 @@ int pm::Vector2i::print(pmEnum mode) const
     return 0;
 }
 
-pm::Vector2i pm::Vector2i::operator+(const Vector2i& other) const
+pm::Vector pm::Vector::operator+(const Vector& other) const
 {
-    pm::Vector2i result;
+    pm::Vector result;
     result.setX(this->getX() + other.getX());
     result.setY(this->getY() + other.getY());
     return result;
 }
 
-pm::Vector2i pm::Vector2i::operator-(const Vector2i& other) const
+pm::Vector pm::Vector::operator-(const Vector& other) const
 {
-    pm::Vector2i result;
+    pm::Vector result;
     result.setX(this->getX() - other.getX());
     result.setY(this->getY() - other.getY());
     return result;
 }
 
-pm::Vector2i pm::Vector2i::operator*(int scalar) const
+pm::Vector pm::Vector::operator*(int scalar) const
 {
-    pm::Vector2i result;
+    pm::Vector result;
     result.setX(this->getX() * scalar);
     result.setY(this->getY() * scalar);
     return result;
 }
 
-pm::Vector2i pm::Vector2i::operator/(int scalar) const
+pm::Vector pm::Vector::operator/(int scalar) const
 {
-    pm::Vector2i result;
+    pm::Vector result;
     result.setX(this->getX() / scalar);
     result.setY(this->getY() / scalar);
     return result;
 }
 
-int pm::vector2i::dotProduct(const Vector2i& vector1, const Vector2i& vector2)
+int pm::vector::dotProduct(const Vector& vector1, const Vector& vector2)
 {
     return vector1.getX() * vector2.getX() + vector1.getY() * vector2.getY();
 }
 
-float pm::vector2i::magnitude(const Vector2i& vector)
+float pm::vector::magnitude(const Vector& vector)
 {
     return sqrt(vector.getX() * vector.getX() + vector.getY() * vector.getY());
 }
 
-pm::Vector2i pm::vector2i::normalize(const Vector2i& vector)
+pm::Vector pm::vector::normalize(const Vector& vector)
 {
-    pm::Vector2i result{};
+    pm::Vector result{};
     float mag{ magnitude(vector) };
     result.setX(vector.getX() / mag);
     result.setY(vector.getY() / mag);
     return result;
 }
 
-float pm::vector2i::angle(const Vector2i& vector1, const Vector2i& vector2, pmEnum angleUnit)
+float pm::vector::angle(const Vector& vector1, const Vector& vector2, pmEnum angleUnit)
 {
     float angle{ acos(dotProduct(vector1, vector2) / (magnitude(vector1) * magnitude(vector2))) };
 

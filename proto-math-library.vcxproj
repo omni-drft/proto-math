@@ -89,12 +89,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\globals.hpp" />
-    <ClInclude Include="include\vector2i.hpp" />
+    <ClInclude Include="include\vector.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\vector2f.cpp" />
-    <ClCompile Include="include\vector2f.hpp" />
-    <ClCompile Include="src\vector2i.cpp" />
+    <ClCompile Include="src\vector.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

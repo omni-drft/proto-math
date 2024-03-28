@@ -14,30 +14,26 @@
 /// It contains all the classes and functions of the library.
 /// </summary>
 namespace pm 
-    {
-    /// <summary>
-    /// 
-    /// </summary>
-    const double PM_PI{ 3.14159265358979323846 };
+{
 
     /// <summary>
     /// Vector2i is a class that represents a 2D vector with integer components.
     /// It provides essential features for 2D vector manipulation.
     /// </summary>
-    class Vector2i 
+    class Vector 
     {
         public:
             /// <summary>
             /// The empty constructor creates a new Vector2i with both components set to 0.
             /// </summary>
-            Vector2i();
+            Vector();
 
             /// <summary>
             /// A constructor that creates a new Vector2i with the given components.
             /// </summary>
             /// <param name="x"> - x coordinate</param>
             /// <param name="y"> - y coordinate</param>
-            Vector2i(int x, int y);
+            Vector(int x, int y);
 
             /// <summary>
             /// X coordinate getter.
@@ -88,28 +84,28 @@ namespace pm
             /// </summary>
             /// <param name="other>- The vector that will be added to the current vector.</param>
             /// <returns>Sum of 2 vectors.</returns>
-            Vector2i operator+(const Vector2i& other) const;
+            Vector operator+(const Vector& other) const;
 
             /// <summary>
             /// Enables simple subtraction of two vectors in the form of vector1 - vector2 using operator overloading.
             /// </summary>
             /// <param name="other">- The vector that will be subtracted from the current vector</param>
             /// <returns>Difference between two vectors as a vector.</returns>
-            Vector2i operator-(const Vector2i& other) const;
+            Vector operator-(const Vector& other) const;
 
             /// <summary>
             /// Enables simple multiplication of a vector by a scalar in the form of vector * scalar using operator overloading.
             /// </summary>
             /// <param name="scalar">- The scalar that will be multiplied by the vector.</param
             /// <returns> The result of the multiplication as a vector.</returns>
-            Vector2i operator*(int scalar) const;
+            Vector operator*(int scalar) const;
 
             /// <summary>
             /// Enables simple division of a vector by a scalar in the form of vector / scalar using operator overloading.
             /// </summary>
             /// <param name="scalar">- The scalar that will divide the vector.</param>
             /// <returns> The result of the division as a vector.</returns>
-            Vector2i operator/(int scalar) const;
+            Vector operator/(int scalar) const;
         
         private:
             /// <summary>
@@ -126,7 +122,7 @@ namespace pm
     /// <summary>
     /// A namespace that contains functions for vector2i manipulation.
     /// </summary>
-    namespace vector2i
+    namespace vector
     {
         /// <summary>
         /// Function that calculates the dot product of two 2D vectors that have integer components.
@@ -134,14 +130,14 @@ namespace pm
         /// <param name="vector1">- The first vector that will be used in the dot product calculation.</param>
         /// <param name="vector2">- The second vector that will be used in the dot product calculation.</param>
         /// <returns>Dot product two given vectors as integer.</returns>
-        int dotProduct(const Vector2i& vector1, const Vector2i& vector2);
+        int dotProduct(const Vector& vector1, const Vector& vector2);
 
         /// <summary>
         /// Funcion that calculates the magnitude of a 2D vector that has integer components.
         /// </summary>
         /// <param name="vector"> - The vector that will be used in the magnitude calculation.</param>
         /// <returns>Magnitude of given vector</returns>
-        float magnitude(const Vector2i& vector);
+        float magnitude(const Vector& vector);
 
         /// <summary>
         /// Function that normalizes a given 2D vector that has integer 
@@ -149,7 +145,7 @@ namespace pm
         /// </summary>
         /// <param name="vector">- The vector that will be normalized</param>
         /// <returns>Normalized vector.</returns>
-        Vector2i normalize(const Vector2i& vector);
+        Vector normalize(const Vector& vector);
 
         /// <summary>
         /// Function that calculates the angle between two 2D vectors that have integer components.
@@ -166,7 +162,7 @@ namespace pm
         /// </para>
         /// </param>
         /// <returns>Angle between first and second vector</returns>
-        float angle(const Vector2i& vector1, const Vector2i& vector2, pmEnum angleUnit = PM_RADIANS);
+        float angle(const Vector& vector1, const Vector& vector2, pmEnum angleUnit = PM_RADIANS);
     }
 
 }

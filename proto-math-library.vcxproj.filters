@@ -9,7 +9,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\vector2i.hpp">
+    <ClInclude Include="include\vector.hpp">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\globals.hpp">
@@ -17,10 +17,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\vector2i.cpp">
+    <ClCompile Include="src\vector.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="include\vector2f.hpp" />
-    <ClCompile Include="src\vector2f.cpp" />
   </ItemGroup>
 </Project>
