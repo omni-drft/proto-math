@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['vector2i_0',['Vector2i',['../classpm_1_1_vector2i.html',1,'pm::Vector2i'],['../classpm_1_1_vector2i.html#acf3075bcfdef492da587b6c3134aff03',1,'pm::Vector2i::Vector2i()'],['../classpm_1_1_vector2i.html#ab4425007a0f7a9fba233fff57d72332e',1,'pm::Vector2i::Vector2i(int x, int y)']]],
-  ['vector2i_2ehpp_1',['vector2i.hpp',['../vector2i_8hpp.html',1,'']]]
+  ['vec_0',['Vec',['../classpm_1_1_vec.html',1,'pm::Vec&lt; T &gt;'],['../classpm_1_1_vec.html#a6df07c4b41a36514f0b91972d44b3784',1,'pm::Vec::Vec()']]]
 ];

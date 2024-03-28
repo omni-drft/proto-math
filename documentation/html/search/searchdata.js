@@ -1,10 +1,9 @@
 var indexSectionsWithContent =
 {
-  0: "gpsv",
+  0: "gpsv~",
   1: "v",
   2: "p",
-  3: "v",
-  4: "gpsv"
+  3: "gsv~"
 };
 
 var indexSectionNames =
@@ -12,8 +11,7 @@ var indexSectionNames =
   0: "all",
   1: "classes",
   2: "namespaces",
-  3: "files",
-  4: "functions"
+  3: "functions"
 };
 
 var indexSectionLabels =
@@ -21,7 +19,6 @@ var indexSectionLabels =
   0: "All",
   1: "Classes",
   2: "Namespaces",
-  3: "Files",
-  4: "Functions"
+  3: "Functions"
 };
 

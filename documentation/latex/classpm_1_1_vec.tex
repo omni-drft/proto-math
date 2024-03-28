@@ -1,0 +1,145 @@
+\doxysection{pm\+::Vec\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classpm_1_1_vec}{}\label{classpm_1_1_vec}\index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
+
+
+Vector class that represents a mathematical vector. It can store any amount of components of any numerical value. \texorpdfstring{$<$}{<}/summary.  
+
+
+
+
+{\ttfamily \#include $<$vec.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classpm_1_1_vec_a6df07c4b41a36514f0b91972d44b3784}{Vec}} (T \texorpdfstring{$\ast$}{*}components, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Vector constructor that initializes the vector with the given components and size. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classpm_1_1_vec_a8483dffda3cefb5a60ce64258e64025a}{get\+Component}} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Function that returns the component of the vector at the given index. \end{DoxyCompactList}\item 
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classpm_1_1_vec_aef4cd55d6538e9a18c07071e89e51d00}{get\+Components}} ()
+\begin{DoxyCompactList}\small\item\em Function that returns the pointer to the array of components of the vector. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classpm_1_1_vec_a4a2fd0ff8cda7e8c3b8f41ac83160d3b}{get\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Function that returns the size of the vector (amount of dimensions). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpm_1_1_vec_a4eab487f92e3f2a0b25708bc4c68178b}{set\+Component}} (size\+\_\+t index, T value)
+\begin{DoxyCompactList}\small\item\em Function that sets the component of the vector at the given index to the given value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpm_1_1_vec_a767f0bfaa579cb52dfa3c41cfcce8ce6}{set\+Components}} (T \texorpdfstring{$\ast$}{*}components)
+\begin{DoxyCompactList}\small\item\em Function that sets the components of vector to the components that are in the given array. \end{DoxyCompactList}\item 
+\Hypertarget{classpm_1_1_vec_afe062cbd263850c5f362b7208cd740e1}\label{classpm_1_1_vec_afe062cbd263850c5f362b7208cd740e1} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Vec} ()
+\begin{DoxyCompactList}\small\item\em Destructor of the vector that deletes the dynamically allocated array of components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class pm\+::\+Vec$<$ T $>$}
+Vector class that represents a mathematical vector. It can store any amount of components of any numerical value. \texorpdfstring{$<$}{<}/summary. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classpm_1_1_vec_a6df07c4b41a36514f0b91972d44b3784}\label{classpm_1_1_vec_a6df07c4b41a36514f0b91972d44b3784} 
+\index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!Vec@{Vec}}
+\index{Vec@{Vec}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vec()}{Vec()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$\+::\+Vec (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{components,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+Vector constructor that initializes the vector with the given components and size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em components} & -\/ Pointer to an array filled with numerical components.\\
+\hline
+{\em size} & -\/ Amount of compontents that user wants to hold in vector.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpm_1_1_vec_a8483dffda3cefb5a60ce64258e64025a}\label{classpm_1_1_vec_a8483dffda3cefb5a60ce64258e64025a} 
+\index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!getComponent@{getComponent}}
+\index{getComponent@{getComponent}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getComponent()}{getComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$\+::get\+Component (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Function that returns the component of the vector at the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & -\/ index of component that will be returned (counting from 0).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Component of vector at the given index.
+\end{DoxyReturn}
+\Hypertarget{classpm_1_1_vec_aef4cd55d6538e9a18c07071e89e51d00}\label{classpm_1_1_vec_aef4cd55d6538e9a18c07071e89e51d00} 
+\index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!getComponents@{getComponents}}
+\index{getComponents@{getComponents}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getComponents()}{getComponents()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$\+::get\+Components}
+
+
+
+Function that returns the pointer to the array of components of the vector. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to an array with components of vector.
+\end{DoxyReturn}
+\Hypertarget{classpm_1_1_vec_a4a2fd0ff8cda7e8c3b8f41ac83160d3b}\label{classpm_1_1_vec_a4a2fd0ff8cda7e8c3b8f41ac83160d3b} 
+\index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$\+::get\+Size}
+
+
+
+Function that returns the size of the vector (amount of dimensions). 
+
+\begin{DoxyReturn}{Returns}
+Size of the vector.
+\end{DoxyReturn}
+\Hypertarget{classpm_1_1_vec_a4eab487f92e3f2a0b25708bc4c68178b}\label{classpm_1_1_vec_a4eab487f92e3f2a0b25708bc4c68178b} 
+\index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!setComponent@{setComponent}}
+\index{setComponent@{setComponent}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setComponent()}{setComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$\+::set\+Component (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index,  }\item[{T}]{value }\end{DoxyParamCaption})}
+
+
+
+Function that sets the component of the vector at the given index to the given value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & -\/ -\/ Index of component which will be changed.\\
+\hline
+{\em value} & Value that component at given index will be changed to.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{classpm_1_1_vec_a767f0bfaa579cb52dfa3c41cfcce8ce6}\label{classpm_1_1_vec_a767f0bfaa579cb52dfa3c41cfcce8ce6} 
+\index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!setComponents@{setComponents}}
+\index{setComponents@{setComponents}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setComponents()}{setComponents()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$\+::set\+Components (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{components }\end{DoxyParamCaption})}
+
+
+
+Function that sets the components of vector to the components that are in the given array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em components} & -\/ Pointer to an array that contains future values of vector components\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/vec.\+hpp\item 
+src/vec.\+cpp\end{DoxyCompactItemize}

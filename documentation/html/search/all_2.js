@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['setx_0',['setX',['../classpm_1_1_vector2i.html#ab41c0736f5b9e232f50fd4a6867e47cf',1,'pm::Vector2i']]],
-  ['sety_1',['setY',['../classpm_1_1_vector2i.html#a21f5374fc4fd7b7fb8669a3789dccf43',1,'pm::Vector2i']]]
+  ['setcomponent_0',['setComponent',['../classpm_1_1_vec.html#a4eab487f92e3f2a0b25708bc4c68178b',1,'pm::Vec']]],
+  ['setcomponents_1',['setComponents',['../classpm_1_1_vec.html#a767f0bfaa579cb52dfa3c41cfcce8ce6',1,'pm::Vec']]]
 ];
