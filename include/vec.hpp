@@ -1,6 +1,8 @@
-#pragma once
+#ifndef VEC_H
+#define VEC_H
 
 #include <iostream>
+#include <cmath>
 
 /// <summary>
 /// The namespace that contains all the facilities of the ProtoMath library.
@@ -23,6 +25,16 @@ namespace pm
 		/// <param name="components">- Pointer to an array filled with numerical components.</param>
 		/// <param name="size">- Amount of compontents that user wants to hold in vector.</param>
 		Vec(T* components, size_t size);
+
+		/// <summary>
+		/// Copy constructor. It creates a new vector that is a copy of the given vector.
+		/// WARNING: This constructor creates a deep copy of the vector.
+		/// This means that the new vector will have its own array of components and destroying
+		/// the older vector will not affect the new one.
+		/// </summary>
+		/// <param name="vec">- Vector reference that will be used to copy data from.</param>
+		Vec(const Vec& vec);
+
 		
 		/// <summary>
 		/// Function that returns the component of the vector at the given index.
@@ -59,6 +71,25 @@ namespace pm
 		void setComponents(T* components);
 
 		/// <summary>
+		/// Function that calculates the magnitude of the vector.
+		/// </summary>
+		/// <returns>Magnitude of vector.</returns>
+		T magnitude();
+
+		/// <summary>
+		/// Function that normalizes the vector. WARNING: This function changes the vector itself.
+		/// </summary>
+		void normalize();
+
+		/// <summary>
+		/// Function that returns the normalized vector. WARNING: This function does 
+		/// not change the vector itself. It returns a new vector that is normalized. 
+		/// If you want to normalize the vector itself, use the normalize() function.
+		/// </summary>
+		/// <returns>Normalized version of vector.</returns>
+		Vec getNormalized();
+
+		/// <summary>
 		/// Destructor of the vector that deletes the dynamically allocated array of components.
 		/// </summary>
 		~Vec();
@@ -77,3 +108,5 @@ namespace pm
 	};
 
 }
+
+#endif // !VEC_H

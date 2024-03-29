@@ -1,5 +1,7 @@
 #include "vec.hpp"
 
+#pragma warning(push)
+#pragma warning(disable: 4244) // disable warning about uninitialized member in constructor
 
 template<typename T>
 pm::Vec<T>::Vec(T* components, size_t size)
@@ -9,6 +11,14 @@ pm::Vec<T>::Vec(T* components, size_t size)
 		this->components[i] = components[i];
 }
 
+
+template<typename T>
+pm::Vec<T>::Vec(const Vec<T>& vec)
+	: components(new T[vec.vecSize]), vecSize(vec.vecSize)
+{
+	for (size_t i{}; i < vecSize; i++) // copy components from given vector to the vector
+		components[i] = vec.components[i];
+}
 
 template<typename T>
 T pm::Vec<T>::getComponent(size_t index)
@@ -52,6 +62,31 @@ void pm::Vec<T>::setComponents(T* components)
 
 
 template<typename T>
+T pm::Vec<T>::magnitude()
+{
+	T sum{}; // sum of squares of components
+	for (size_t i{}; i < vecSize; i++) // iterate over components
+		sum += components[i] * components[i]; // add square of component to sum
+	return sqrt(sum); // return square root of sum
+}
+
+template<typename T>
+void pm::Vec<T>::normalize()
+{
+	T mag = magnitude(); // get magnitude of the vector
+	for (size_t i{}; i < vecSize; i++) // iterate over components
+		components[i] /= mag; // divide component by magnitude)
+}
+
+template<typename T>
+pm::Vec<T> pm::Vec<T>::getNormalized()
+{
+	Vec<T> normalized(*this); // create a copy of the vector
+	normalized.normalize(); // normalize the copy
+	return normalized; // return the copy
+}
+
+template<typename T>
 pm::Vec<T>::~Vec()
 {
 	delete[] components; // delete the array of components
@@ -67,3 +102,5 @@ template class pm::Vec<long long>;
 template class pm::Vec<unsigned int>;
 template class pm::Vec<unsigned long>;
 template class pm::Vec<unsigned long long>;
+
+#pragma warning(pop)
