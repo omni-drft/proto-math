@@ -1,7 +1,8 @@
 #include "vec.hpp"
 
 #pragma warning(push)
-#pragma warning(disable: 4244) // disable warning about uninitialized member in constructor
+#pragma warning(disable: 4244) 
+#pragma warning(disable: 4661)
 
 template<typename T>
 pm::Vec<T>::Vec(T* components, size_t size)
@@ -84,6 +85,54 @@ pm::Vec<T> pm::Vec<T>::getNormalized()
 	Vec<T> normalized(*this); // create a copy of the vector
 	normalized.normalize(); // normalize the copy
 	return normalized; // return the copy
+}
+
+template<typename T>
+pm::Vec<T> pm::Vec<T>::operator+(const Vec<T>& vec)
+{
+	Vec<T> sum(*this); // create a copy of the vector
+
+	for (size_t i{}; i < vecSize; i++) // iterate over components
+		// add component of the given vector to the component of the copy
+		sum.components[i] += vec.components[i]; 
+
+	return sum;
+}
+
+template<typename T>
+pm::Vec<T> pm::Vec<T>::operator-(const Vec<T>& vec)
+{
+	Vec<T> diff(*this); // create a copy of the vector
+
+	for (size_t i{}; i < vecSize; i++) // iterate over components
+		// subtract component of the given vector from the component of the copy
+		diff.components[i] -= vec.components[i];
+
+	return diff;
+}
+
+template <typename T>
+pm::Vec<T> pm::Vec<T>::operator*(const T& scalar)
+{
+	Vec<T> scaled(*this); // create a copy of the vector
+
+	for (size_t i{}; i < vecSize; i++) // iterate over components
+		// multiply component of the copy by the scalar
+		scaled.components[i] *= scalar;
+
+	return scaled;
+}
+
+template<typename T>
+pm::Vec<T> pm::Vec<T>::operator/(const T& scalar)
+{
+	Vec<T> scaled(*this); // create a copy of the vector
+
+	for (size_t i{}; i < vecSize; i++) // iterate over components
+		// divide component of the copy by the scalar
+		scaled.components[i] /= scalar;
+
+	return scaled;
 }
 
 template<typename T>

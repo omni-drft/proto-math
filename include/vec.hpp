@@ -39,7 +39,7 @@ namespace pm
 		/// <summary>
 		/// Function that returns the component of the vector at the given index.
 		/// </summary>
-		/// <param name="index">- index of component that will be returned (counting from 0).</param>
+		/// <param name="index">- Index of component that will be returned (counting from 0).</param>
 		/// <returns>Component of vector at the given index.</returns>
 		T getComponent(size_t index);
 
@@ -58,7 +58,7 @@ namespace pm
 		/// <summary>
 		/// Function that sets the component of the vector at the given index to the given value.
 		/// </summary>
-		/// <param name="index">- - Index of component which will be changed.</param>
+		/// <param name="index">- Index of component which will be changed.</param>
 		/// <param name="value">Value that component at given index will be changed to.</param>
 		void setComponent(size_t index, T value);
 
@@ -90,6 +90,34 @@ namespace pm
 		Vec getNormalized();
 
 		/// <summary>
+		/// Operator that allows to add two vectors together in a simple way.
+		/// </summary>
+		/// <param name="vec">- Second vector that will be used in addition.</param>
+		/// <returns>Result of addition.</returns>
+		Vec operator+(const Vec& vec);
+
+		/// <summary>
+		/// Operator that allows simple vector subtraction.
+		/// </summary>
+		/// <param name="vec">- Vector that will be substracted.</param>
+		/// <returns>Result of subtraction.</returns>
+		Vec operator-(const Vec& vec);
+
+		/// <summary>
+		/// Operator that allows to multiply the vector by a scalar.
+		/// </summary>
+		/// <param name="scalar">- Scalar that will be used to multiply the vector.</param>
+		/// <returns>Result of multiplication.</returns>
+		Vec operator*(const T& scalar);	
+
+		/// <summary>
+		/// Operator that allows to divide the vector by a scalar.
+		/// </summary>
+		/// <param name="scalar">- Scalar that will be used to divide the vector.</param>
+		/// <returns>Result of division.</returns>
+		Vec operator/(const T& scalar);
+
+		/// <summary>
 		/// Destructor of the vector that deletes the dynamically allocated array of components.
 		/// </summary>
 		~Vec();
@@ -106,6 +134,7 @@ namespace pm
 		/// </summary>
 		size_t vecSize;
 	};
+
 
 }
 
