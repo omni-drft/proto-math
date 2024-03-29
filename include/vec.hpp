@@ -135,6 +135,15 @@ namespace pm
 		size_t vecSize;
 	};
 
+	namespace vector
+	{
+		template<typename T>
+		T dotProduct(Vec<T>& vec1, Vec<T>& vec2);
+
+		template<typename T>
+		Vec<T> crossProduct(Vec<T>& vec1, Vec<T>& vec2);
+	}
+
 
 }
 

@@ -141,6 +141,39 @@ pm::Vec<T>::~Vec()
 	delete[] components; // delete the array of components
 }
 
+template<typename T>
+T pm::vector::dotProduct(Vec<T>& vec1, Vec<T>& vec2)
+{
+	T result{}; // result of the dot product
+
+	for (size_t i{}; i < vec1.getSize(); i++) // iterate over components
+		// add product of components to the result
+		result += vec1.getComponent(i) * vec2.getComponent(i);
+
+	return result;
+}
+
+template<typename T>
+pm::Vec<T> pm::vector::crossProduct(Vec<T>& vec1, Vec<T>& vec2)
+{
+	if (vec1.getSize() != 3 || vec2.getSize() != 3) // if vectors are not 3D
+		// throw an exception
+		throw std::invalid_argument("ProtoMath: Cross product is defined only for 3D vectors");
+
+	T components[3]; // components of the resulting vector
+
+	components[0] = vec1.getComponent(1) * vec2.getComponent(2) 
+				  - vec1.getComponent(2) * vec2.getComponent(1); // x component
+	components[1] = (vec1.getComponent(0) * vec2.getComponent(2)
+				  - vec1.getComponent(2) * vec2.getComponent(0)) * (-1); // y component
+	components[2] = vec1.getComponent(0) * vec2.getComponent(1)
+				  - vec1.getComponent(1) * vec2.getComponent(0); // z component
+
+	Vec result(components, 3); // create a vector from the components
+	return result; 
+}
+
+
 
 // Explicit instantiation of Vec class for different types
 template class pm::Vec<int>; 
