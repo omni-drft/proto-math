@@ -135,11 +135,30 @@ namespace pm
 		size_t vecSize;
 	};
 
+	/// <summary>
+	/// Namespace that contains functions that work with vectors.
+	/// It is nested in the ProtoMath namespace.
+	/// </summary>
 	namespace vector
 	{
+		/// <summary>
+		/// Function that calculates the dot product of two vectors.
+		/// </summary>
+		/// <typeparam name="T">- Any possible data type that vector can hold.</typeparam>
+		/// <param name="vec1">- First vector.</param>
+		/// <param name="vec2">- Second vector.</param>
+		/// <returns>The dot product of two given vectors.</returns>
 		template<typename T>
 		T dotProduct(Vec<T>& vec1, Vec<T>& vec2);
 
+		/// <summary>
+		/// Function that calculates the cross product of two vectors.
+		/// WARNING: This function works only for 3D vectors.
+		/// </summary>
+		/// <typeparam name="T">- Any possible data type that vector can hold.</typeparam>
+		/// <param name="vec1">- First vector.</param>
+		/// <param name="vec2">- Second vector.</param>
+		/// <returns>The cross product of two given vectors.</returns>
 		template<typename T>
 		Vec<T> crossProduct(Vec<T>& vec1, Vec<T>& vec2);
 	}
