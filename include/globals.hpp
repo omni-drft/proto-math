@@ -1,3 +1,5 @@
+#pragma once
+
 /// <summary>
 /// Values in this enum are used as flags to determine different behaviors across whole library.
 /// </summary>

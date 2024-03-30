@@ -89,6 +89,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\globals.hpp" />
+    <ClInclude Include="include\pm.hpp" />
     <ClInclude Include="include\vec.hpp" />
   </ItemGroup>
   <ItemGroup>

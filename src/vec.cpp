@@ -136,6 +136,19 @@ pm::Vec<T> pm::Vec<T>::operator/(const T& scalar)
 }
 
 template<typename T>
+void pm::Vec<T>::print()
+{
+	std::cout << "["; // print opening bracket
+	for (size_t i{}; i < vecSize; i++) // iterate over components
+	{
+		std::cout << components[i]; // print component
+		if (i != vecSize - 1) // if component is not the last one
+			std::cout << ", "; // print a comma
+	}
+	std::cout << "]" << std::endl; // print closing bracket
+}
+
+template<typename T>
 pm::Vec<T>::~Vec()
 {
 	delete[] components; // delete the array of components
@@ -176,11 +189,8 @@ pm::Vec<T> pm::vector::crossProduct(Vec<T>& vec1, Vec<T>& vec2)
 template<typename T>
 pm::Vec<T> pm::vector::projection(Vec<T>& vec1, Vec<T>& vec2)
 {
-	Vec<T> projection(vec2); // create a copy of the second vector
-	T dot{ dotProduct(vec1, vec2) }; // calculate dot product of the vectors
-	T mag{ vec2.magnitude() }; // calculate magnitude of the second vector
-	projection = projection * (dot / (mag * mag)); // scale the copy by the scalar
-	return projection; // return the copy
+	// calculate projection of vec1 onto vec2
+	return vec2 * (dotProduct(vec1, vec2) / (vec2.magnitude() * vec2.magnitude()));
 }
 
 template<typename T>
@@ -219,5 +229,51 @@ template class pm::Vec<long long>;
 template class pm::Vec<unsigned int>;
 template class pm::Vec<unsigned long>;
 template class pm::Vec<unsigned long long>;
+
+// Explicit instantiation of vector functions for different types
+template int pm::vector::dotProduct(pm::Vec<int>&, pm::Vec<int>&);
+template float pm::vector::dotProduct(pm::Vec<float>&, pm::Vec<float>&);
+template double pm::vector::dotProduct(pm::Vec<double>&, pm::Vec<double>&);
+template long pm::vector::dotProduct(pm::Vec<long>&, pm::Vec<long>&);
+template long long pm::vector::dotProduct(pm::Vec<long long>&, pm::Vec<long long>&);
+template unsigned int pm::vector::dotProduct(pm::Vec<unsigned int>&, pm::Vec<unsigned int>&);
+template unsigned long pm::vector::dotProduct(pm::Vec<unsigned long>&, pm::Vec<unsigned long>&);
+template unsigned long long pm::vector::dotProduct(pm::Vec<unsigned long long>&, pm::Vec<unsigned long long>&);
+
+template pm::Vec<int> pm::vector::crossProduct(pm::Vec<int>&, pm::Vec<int>&);
+template pm::Vec<float> pm::vector::crossProduct(pm::Vec<float>&, pm::Vec<float>&);
+template pm::Vec<double> pm::vector::crossProduct(pm::Vec<double>&, pm::Vec<double>&);
+template pm::Vec<long> pm::vector::crossProduct(pm::Vec<long>&, pm::Vec<long>&);
+template pm::Vec<long long> pm::vector::crossProduct(pm::Vec<long long>&, pm::Vec<long long>&);
+template pm::Vec<unsigned int> pm::vector::crossProduct(pm::Vec<unsigned int>&, pm::Vec<unsigned int>&);
+template pm::Vec<unsigned long> pm::vector::crossProduct(pm::Vec<unsigned long>&, pm::Vec<unsigned long>&);
+template pm::Vec<unsigned long long> pm::vector::crossProduct(pm::Vec<unsigned long long>&, pm::Vec<unsigned long long>&);
+
+template pm::Vec<int> pm::vector::projection(pm::Vec<int>&, pm::Vec<int>&);
+template pm::Vec<float> pm::vector::projection(pm::Vec<float>&, pm::Vec<float>&);
+template pm::Vec<double> pm::vector::projection(pm::Vec<double>&, pm::Vec<double>&);
+template pm::Vec<long> pm::vector::projection(pm::Vec<long>&, pm::Vec<long>&);
+template pm::Vec<long long> pm::vector::projection(pm::Vec<long long>&, pm::Vec<long long>&);
+template pm::Vec<unsigned int> pm::vector::projection(pm::Vec<unsigned int>&, pm::Vec<unsigned int>&);
+template pm::Vec<unsigned long> pm::vector::projection(pm::Vec<unsigned long>&, pm::Vec<unsigned long>&);
+template pm::Vec<unsigned long long> pm::vector::projection(pm::Vec<unsigned long long>&, pm::Vec<unsigned long long>&);
+
+template double pm::vector::angle(pm::Vec<int>&, pm::Vec<int>&, pmEnum);
+template double pm::vector::angle(pm::Vec<float>&, pm::Vec<float>&, pmEnum);
+template double pm::vector::angle(pm::Vec<double>&, pm::Vec<double>&, pmEnum);
+template double pm::vector::angle(pm::Vec<long>&, pm::Vec<long>&, pmEnum);
+template double pm::vector::angle(pm::Vec<long long>&, pm::Vec<long long>&, pmEnum);
+template double pm::vector::angle(pm::Vec<unsigned int>&, pm::Vec<unsigned int>&, pmEnum);
+template double pm::vector::angle(pm::Vec<unsigned long>&, pm::Vec<unsigned long>&, pmEnum);
+template double pm::vector::angle(pm::Vec<unsigned long long>&, pm::Vec<unsigned long long>&, pmEnum);
+
+template bool pm::vector::orthogonal(pm::Vec<int>&, pm::Vec<int>&);
+template bool pm::vector::orthogonal(pm::Vec<float>&, pm::Vec<float>&);
+template bool pm::vector::orthogonal(pm::Vec<double>&, pm::Vec<double>&);
+template bool pm::vector::orthogonal(pm::Vec<long>&, pm::Vec<long>&);
+template bool pm::vector::orthogonal(pm::Vec<long long>&, pm::Vec<long long>&);
+template bool pm::vector::orthogonal(pm::Vec<unsigned int>&, pm::Vec<unsigned int>&);
+template bool pm::vector::orthogonal(pm::Vec<unsigned long>&, pm::Vec<unsigned long>&);
+template bool pm::vector::orthogonal(pm::Vec<unsigned long long>&, pm::Vec<unsigned long long>&);
 
 #pragma warning(pop)

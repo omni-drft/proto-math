@@ -119,6 +119,8 @@ namespace pm
 		/// <returns>Result of division.</returns>
 		Vec operator/(const T& scalar);
 
+		void print();
+
 		/// <summary>
 		/// Destructor of the vector that deletes the dynamically allocated array of components.
 		/// </summary>
