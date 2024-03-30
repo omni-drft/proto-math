@@ -173,6 +173,41 @@ pm::Vec<T> pm::vector::crossProduct(Vec<T>& vec1, Vec<T>& vec2)
 	return result; 
 }
 
+template<typename T>
+pm::Vec<T> pm::vector::projection(Vec<T>& vec1, Vec<T>& vec2)
+{
+	Vec<T> projection(vec2); // create a copy of the second vector
+	T dot{ dotProduct(vec1, vec2) }; // calculate dot product of the vectors
+	T mag{ vec2.magnitude() }; // calculate magnitude of the second vector
+	projection = projection * (dot / (mag * mag)); // scale the copy by the scalar
+	return projection; // return the copy
+}
+
+template<typename T>
+double pm::vector::angle(Vec<T>& vec1, Vec<T>& vec2, pmEnum angleMode)
+{
+	double angle{}; // angle between the vectors
+
+	// calculate angle
+	angle = acos(dotProduct(vec1, vec2) / (vec1.magnitude() * vec2.magnitude())); 
+
+	// convert angle to degrees if needed
+	if (angleMode == PM_DEGREES)
+		angle = angle * 180 / PM_PI;
+
+	return angle;
+}
+
+template<typename T>
+bool pm::vector::orthogonal(Vec<T>& vec1, Vec<T>& vec2)
+{
+	if (!dotProduct(vec1, vec2)) // if dot product is zero
+		return true; 
+
+	// if dot product is not zero
+	return false;
+}
+
 
 
 // Explicit instantiation of Vec class for different types

@@ -4,6 +4,8 @@
 #include <iostream>
 #include <cmath>
 
+#include "globals.hpp"
+
 /// <summary>
 /// The namespace that contains all the facilities of the ProtoMath library.
 /// </summary>
@@ -161,6 +163,36 @@ namespace pm
 		/// <returns>The cross product of two given vectors.</returns>
 		template<typename T>
 		Vec<T> crossProduct(Vec<T>& vec1, Vec<T>& vec2);
+
+		/// <summary>
+		/// Function that calculates the projection of first vector onto second.
+		/// </summary>
+		/// <typeparam name="T">- Any possible data type that vector can hold.</typeparam>
+		/// <param name="vec1">- First vector.</param>
+		/// <param name="vec2">- Second vector.</param>
+		/// <returns>A vector that is a projection of the first vector onto the second one</returns>
+		template<typename T>
+		Vec<T> projection(Vec<T>& vec1, Vec<T>& vec2);
+
+		/// <summary>
+		/// Function that calculates the angle between two vectors.
+		/// </summary>
+		/// <typeparam name="T">- Any possible data type that vector can hold.</typeparam>
+		/// <param name="vec1">- First vector</param>
+		/// <param name="vec2">- Second vector</param>
+		/// <returns>Angle between vectors as double</returns>
+		template<typename T>
+		double angle(Vec<T>& vec1, Vec<T>& vec2, pmEnum angleMode = PM_RADIANS);
+
+		/// <summary>
+		/// Function that checks if two vectors are orthogonal to each other.
+		/// </summary>
+		/// <typeparam name="T">- Any possible data type that vector can hold.</typeparam>
+		/// <param name="vec1">- First vector</param>
+		/// <param name="vec2">- Second vector</param>
+		/// <returns>True if vectors are orthogonal, false otherwise.</returns>
+		template<typename T>
+		bool orthogonal(Vec<T>& vec1, Vec<T>& vec2);
 	}
 
 
