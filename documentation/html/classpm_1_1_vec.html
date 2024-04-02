@@ -90,6 +90,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6df07c4b41a36514f0b91972d44b3784"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpm_1_1_vec.html#a6df07c4b41a36514f0b91972d44b3784">Vec</a> (T *components, size_t size)</td></tr>
 <tr class="memdesc:a6df07c4b41a36514f0b91972d44b3784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector constructor that initializes the vector with the given components and size.  <br /></td></tr>
 <tr class="separator:a6df07c4b41a36514f0b91972d44b3784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9088c3f1ad980f1e791db5bb905ef051"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpm_1_1_vec.html#a9088c3f1ad980f1e791db5bb905ef051">Vec</a> (const <a class="el" href="classpm_1_1_vec.html">Vec</a> &amp;vec)</td></tr>
+<tr class="memdesc:a9088c3f1ad980f1e791db5bb905ef051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor. It creates a new vector that is a copy of the given vector. WARNING: This constructor creates a deep copy of the vector. This means that the new vector will have its own array of components and destroying the older vector will not affect the new one.  <br /></td></tr>
+<tr class="separator:a9088c3f1ad980f1e791db5bb905ef051"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8483dffda3cefb5a60ce64258e64025a"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpm_1_1_vec.html#a8483dffda3cefb5a60ce64258e64025a">getComponent</a> (size_t index)</td></tr>
 <tr class="memdesc:a8483dffda3cefb5a60ce64258e64025a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that returns the component of the vector at the given index.  <br /></td></tr>
 <tr class="separator:a8483dffda3cefb5a60ce64258e64025a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -105,6 +108,31 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a767f0bfaa579cb52dfa3c41cfcce8ce6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpm_1_1_vec.html#a767f0bfaa579cb52dfa3c41cfcce8ce6">setComponents</a> (T *components)</td></tr>
 <tr class="memdesc:a767f0bfaa579cb52dfa3c41cfcce8ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the components of vector to the components that are in the given array.  <br /></td></tr>
 <tr class="separator:a767f0bfaa579cb52dfa3c41cfcce8ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2798aa8e242d7091f22d04ffb8d2c3f"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpm_1_1_vec.html#ad2798aa8e242d7091f22d04ffb8d2c3f">magnitude</a> ()</td></tr>
+<tr class="memdesc:ad2798aa8e242d7091f22d04ffb8d2c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that calculates the magnitude of the vector.  <br /></td></tr>
+<tr class="separator:ad2798aa8e242d7091f22d04ffb8d2c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e8be50727184524e503c95ee98f283"><td class="memItemLeft" align="right" valign="top"><a id="a01e8be50727184524e503c95ee98f283" name="a01e8be50727184524e503c95ee98f283"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>normalize</b> ()</td></tr>
+<tr class="memdesc:a01e8be50727184524e503c95ee98f283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that normalizes the vector. WARNING: This function changes the vector itself. <br /></td></tr>
+<tr class="separator:a01e8be50727184524e503c95ee98f283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a469094acfcab6e405aad7cd8923c9514"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpm_1_1_vec.html">Vec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpm_1_1_vec.html#a469094acfcab6e405aad7cd8923c9514">getNormalized</a> ()</td></tr>
+<tr class="memdesc:a469094acfcab6e405aad7cd8923c9514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that returns the normalized vector. WARNING: This function does not change the vector itself. It returns a new vector that is normalized. If you want to normalize the vector itself, use the <a class="el" href="classpm_1_1_vec.html#a01e8be50727184524e503c95ee98f283" title="Function that normalizes the vector. WARNING: This function changes the vector itself.">normalize()</a> function.  <br /></td></tr>
+<tr class="separator:a469094acfcab6e405aad7cd8923c9514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab24040f1e7b1dedbe1a4dfd78dd57c84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpm_1_1_vec.html">Vec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpm_1_1_vec.html#ab24040f1e7b1dedbe1a4dfd78dd57c84">operator+</a> (const <a class="el" href="classpm_1_1_vec.html">Vec</a> &amp;vec)</td></tr>
+<tr class="memdesc:ab24040f1e7b1dedbe1a4dfd78dd57c84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator that allows to add two vectors together in a simple way.  <br /></td></tr>
+<tr class="separator:ab24040f1e7b1dedbe1a4dfd78dd57c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa80342dbe3c3f2e51bdc032ea981deee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpm_1_1_vec.html">Vec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpm_1_1_vec.html#aa80342dbe3c3f2e51bdc032ea981deee">operator-</a> (const <a class="el" href="classpm_1_1_vec.html">Vec</a> &amp;vec)</td></tr>
+<tr class="memdesc:aa80342dbe3c3f2e51bdc032ea981deee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator that allows simple vector subtraction.  <br /></td></tr>
+<tr class="separator:aa80342dbe3c3f2e51bdc032ea981deee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a415a664174520741d87266cdc830a1d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpm_1_1_vec.html">Vec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpm_1_1_vec.html#a415a664174520741d87266cdc830a1d4">operator*</a> (const T &amp;scalar)</td></tr>
+<tr class="memdesc:a415a664174520741d87266cdc830a1d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator that allows to multiply the vector by a scalar.  <br /></td></tr>
+<tr class="separator:a415a664174520741d87266cdc830a1d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb62830ef75449586e8a37d25de67846"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpm_1_1_vec.html">Vec</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpm_1_1_vec.html#acb62830ef75449586e8a37d25de67846">operator/</a> (const T &amp;scalar)</td></tr>
+<tr class="memdesc:acb62830ef75449586e8a37d25de67846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator that allows to divide the vector by a scalar.  <br /></td></tr>
+<tr class="separator:acb62830ef75449586e8a37d25de67846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1c33785449be009574d850c484a9346"><td class="memItemLeft" align="right" valign="top"><a id="af1c33785449be009574d850c484a9346" name="af1c33785449be009574d850c484a9346"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr>
+<tr class="separator:af1c33785449be009574d850c484a9346"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe062cbd263850c5f362b7208cd740e1"><td class="memItemLeft" align="right" valign="top"><a id="afe062cbd263850c5f362b7208cd740e1" name="afe062cbd263850c5f362b7208cd740e1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~Vec</b> ()</td></tr>
 <tr class="memdesc:afe062cbd263850c5f362b7208cd740e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor of the vector that deletes the dynamically allocated array of components. <br /></td></tr>
@@ -115,7 +143,7 @@ Public Member Functions</h2></td></tr>
 class pm::Vec&lt; T &gt;</div><p>Vector class that represents a mathematical vector. It can store any amount of components of any numerical value. &lt;/summary. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6df07c4b41a36514f0b91972d44b3784" name="a6df07c4b41a36514f0b91972d44b3784"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6df07c4b41a36514f0b91972d44b3784">&#9670;&#160;</a></span>Vec()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6df07c4b41a36514f0b91972d44b3784">&#9670;&#160;</a></span>Vec() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,6 +181,34 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a9088c3f1ad980f1e791db5bb905ef051" name="a9088c3f1ad980f1e791db5bb905ef051"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9088c3f1ad980f1e791db5bb905ef051">&#9670;&#160;</a></span>Vec() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpm_1_1_vec.html">pm::Vec</a>&lt; T &gt;::Vec </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpm_1_1_vec.html">Vec</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy constructor. It creates a new vector that is a copy of the given vector. WARNING: This constructor creates a deep copy of the vector. This means that the new vector will have its own array of components and destroying the older vector will not affect the new one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>- Vector reference that will be used to copy data from.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8483dffda3cefb5a60ce64258e64025a" name="a8483dffda3cefb5a60ce64258e64025a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8483dffda3cefb5a60ce64258e64025a">&#9670;&#160;</a></span>getComponent()</h2>
@@ -175,7 +231,7 @@ template&lt;typename T &gt; </div>
 <p>Function that returns the component of the vector at the given index. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>- index of component that will be returned (counting from 0).</td></tr>
+    <tr><td class="paramname">index</td><td>- Index of component that will be returned (counting from 0).</td></tr>
   </table>
   </dd>
 </dl>
@@ -202,6 +258,25 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a469094acfcab6e405aad7cd8923c9514" name="a469094acfcab6e405aad7cd8923c9514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a469094acfcab6e405aad7cd8923c9514">&#9670;&#160;</a></span>getNormalized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpm_1_1_vec.html">pm::Vec</a>&lt; T &gt; <a class="el" href="classpm_1_1_vec.html">pm::Vec</a>&lt; T &gt;::getNormalized</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function that returns the normalized vector. WARNING: This function does not change the vector itself. It returns a new vector that is normalized. If you want to normalize the vector itself, use the <a class="el" href="classpm_1_1_vec.html#a01e8be50727184524e503c95ee98f283" title="Function that normalizes the vector. WARNING: This function changes the vector itself.">normalize()</a> function. </p>
+<dl class="section return"><dt>Returns</dt><dd>Normalized version of vector.</dd></dl>
+
+</div>
+</div>
 <a id="a4a2fd0ff8cda7e8c3b8f41ac83160d3b" name="a4a2fd0ff8cda7e8c3b8f41ac83160d3b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a2fd0ff8cda7e8c3b8f41ac83160d3b">&#9670;&#160;</a></span>getSize()</h2>
 
@@ -218,6 +293,141 @@ template&lt;typename T &gt; </div>
 
 <p>Function that returns the size of the vector (amount of dimensions). </p>
 <dl class="section return"><dt>Returns</dt><dd>Size of the vector.</dd></dl>
+
+</div>
+</div>
+<a id="ad2798aa8e242d7091f22d04ffb8d2c3f" name="ad2798aa8e242d7091f22d04ffb8d2c3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2798aa8e242d7091f22d04ffb8d2c3f">&#9670;&#160;</a></span>magnitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classpm_1_1_vec.html">pm::Vec</a>&lt; T &gt;::magnitude</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function that calculates the magnitude of the vector. </p>
+<dl class="section return"><dt>Returns</dt><dd>Magnitude of vector.</dd></dl>
+
+</div>
+</div>
+<a id="a415a664174520741d87266cdc830a1d4" name="a415a664174520741d87266cdc830a1d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a415a664174520741d87266cdc830a1d4">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpm_1_1_vec.html">pm::Vec</a>&lt; T &gt; <a class="el" href="classpm_1_1_vec.html">pm::Vec</a>&lt; T &gt;::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>scalar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operator that allows to multiply the vector by a scalar. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scalar</td><td>- Scalar that will be used to multiply the vector.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Result of multiplication.</dd></dl>
+
+</div>
+</div>
+<a id="ab24040f1e7b1dedbe1a4dfd78dd57c84" name="ab24040f1e7b1dedbe1a4dfd78dd57c84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab24040f1e7b1dedbe1a4dfd78dd57c84">&#9670;&#160;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpm_1_1_vec.html">pm::Vec</a>&lt; T &gt; <a class="el" href="classpm_1_1_vec.html">pm::Vec</a>&lt; T &gt;::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpm_1_1_vec.html">Vec</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operator that allows to add two vectors together in a simple way. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>- Second vector that will be used in addition.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Result of addition.</dd></dl>
+
+</div>
+</div>
+<a id="aa80342dbe3c3f2e51bdc032ea981deee" name="aa80342dbe3c3f2e51bdc032ea981deee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa80342dbe3c3f2e51bdc032ea981deee">&#9670;&#160;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpm_1_1_vec.html">pm::Vec</a>&lt; T &gt; <a class="el" href="classpm_1_1_vec.html">pm::Vec</a>&lt; T &gt;::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classpm_1_1_vec.html">Vec</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operator that allows simple vector subtraction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vec</td><td>- Vector that will be substracted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Result of subtraction.</dd></dl>
+
+</div>
+</div>
+<a id="acb62830ef75449586e8a37d25de67846" name="acb62830ef75449586e8a37d25de67846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb62830ef75449586e8a37d25de67846">&#9670;&#160;</a></span>operator/()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpm_1_1_vec.html">pm::Vec</a>&lt; T &gt; <a class="el" href="classpm_1_1_vec.html">pm::Vec</a>&lt; T &gt;::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>scalar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operator that allows to divide the vector by a scalar. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scalar</td><td>- Scalar that will be used to divide the vector.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Result of division.</dd></dl>
 
 </div>
 </div>
@@ -252,7 +462,7 @@ template&lt;typename T &gt; </div>
 <p>Function that sets the component of the vector at the given index to the given value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">index</td><td>- - Index of component which will be changed.</td></tr>
+    <tr><td class="paramname">index</td><td>- Index of component which will be changed.</td></tr>
     <tr><td class="paramname">value</td><td>Value that component at given index will be changed to.</td></tr>
   </table>
   </dd>

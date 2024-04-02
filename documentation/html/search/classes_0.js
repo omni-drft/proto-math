@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vec_0',['Vec',['../classpm_1_1_vec.html',1,'pm']]]
+  ['mat_0',['Mat',['../classpm_1_1_mat.html',1,'pm']]]
 ];

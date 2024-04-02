@@ -14,6 +14,8 @@ Vector class that represents a mathematical vector. It can store any amount of c
 \item 
 \mbox{\hyperlink{classpm_1_1_vec_a6df07c4b41a36514f0b91972d44b3784}{Vec}} (T \texorpdfstring{$\ast$}{*}components, size\+\_\+t size)
 \begin{DoxyCompactList}\small\item\em Vector constructor that initializes the vector with the given components and size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpm_1_1_vec_a9088c3f1ad980f1e791db5bb905ef051}{Vec}} (const \mbox{\hyperlink{classpm_1_1_vec}{Vec}} \&vec)
+\begin{DoxyCompactList}\small\item\em Copy constructor. It creates a new vector that is a copy of the given vector. WARNING\+: This constructor creates a deep copy of the vector. This means that the new vector will have its own array of components and destroying the older vector will not affect the new one. \end{DoxyCompactList}\item 
 T \mbox{\hyperlink{classpm_1_1_vec_a8483dffda3cefb5a60ce64258e64025a}{get\+Component}} (size\+\_\+t index)
 \begin{DoxyCompactList}\small\item\em Function that returns the component of the vector at the given index. \end{DoxyCompactList}\item 
 T \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classpm_1_1_vec_aef4cd55d6538e9a18c07071e89e51d00}{get\+Components}} ()
@@ -24,6 +26,24 @@ void \mbox{\hyperlink{classpm_1_1_vec_a4eab487f92e3f2a0b25708bc4c68178b}{set\+Co
 \begin{DoxyCompactList}\small\item\em Function that sets the component of the vector at the given index to the given value. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classpm_1_1_vec_a767f0bfaa579cb52dfa3c41cfcce8ce6}{set\+Components}} (T \texorpdfstring{$\ast$}{*}components)
 \begin{DoxyCompactList}\small\item\em Function that sets the components of vector to the components that are in the given array. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classpm_1_1_vec_ad2798aa8e242d7091f22d04ffb8d2c3f}{magnitude}} ()
+\begin{DoxyCompactList}\small\item\em Function that calculates the magnitude of the vector. \end{DoxyCompactList}\item 
+\Hypertarget{classpm_1_1_vec_a01e8be50727184524e503c95ee98f283}\label{classpm_1_1_vec_a01e8be50727184524e503c95ee98f283} 
+void {\bfseries normalize} ()
+\begin{DoxyCompactList}\small\item\em Function that normalizes the vector. WARNING\+: This function changes the vector itself. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpm_1_1_vec}{Vec}} \mbox{\hyperlink{classpm_1_1_vec_a469094acfcab6e405aad7cd8923c9514}{get\+Normalized}} ()
+\begin{DoxyCompactList}\small\item\em Function that returns the normalized vector. WARNING\+: This function does not change the vector itself. It returns a new vector that is normalized. If you want to normalize the vector itself, use the \doxylink{classpm_1_1_vec_a01e8be50727184524e503c95ee98f283}{normalize()} function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpm_1_1_vec}{Vec}} \mbox{\hyperlink{classpm_1_1_vec_ab24040f1e7b1dedbe1a4dfd78dd57c84}{operator+}} (const \mbox{\hyperlink{classpm_1_1_vec}{Vec}} \&vec)
+\begin{DoxyCompactList}\small\item\em Operator that allows to add two vectors together in a simple way. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpm_1_1_vec}{Vec}} \mbox{\hyperlink{classpm_1_1_vec_aa80342dbe3c3f2e51bdc032ea981deee}{operator-\/}} (const \mbox{\hyperlink{classpm_1_1_vec}{Vec}} \&vec)
+\begin{DoxyCompactList}\small\item\em Operator that allows simple vector subtraction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpm_1_1_vec}{Vec}} \mbox{\hyperlink{classpm_1_1_vec_a415a664174520741d87266cdc830a1d4}{operator\texorpdfstring{$\ast$}{*}}} (const T \&scalar)
+\begin{DoxyCompactList}\small\item\em Operator that allows to multiply the vector by a scalar. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classpm_1_1_vec}{Vec}} \mbox{\hyperlink{classpm_1_1_vec_acb62830ef75449586e8a37d25de67846}{operator/}} (const T \&scalar)
+\begin{DoxyCompactList}\small\item\em Operator that allows to divide the vector by a scalar. \end{DoxyCompactList}\item 
+\Hypertarget{classpm_1_1_vec_af1c33785449be009574d850c484a9346}\label{classpm_1_1_vec_af1c33785449be009574d850c484a9346} 
+void {\bfseries print} ()
+\item 
 \Hypertarget{classpm_1_1_vec_afe062cbd263850c5f362b7208cd740e1}\label{classpm_1_1_vec_afe062cbd263850c5f362b7208cd740e1} 
 {\bfseries \texorpdfstring{$\sim$}{\string~}\+Vec} ()
 \begin{DoxyCompactList}\small\item\em Destructor of the vector that deletes the dynamically allocated array of components. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -38,7 +58,7 @@ Vector class that represents a mathematical vector. It can store any amount of c
 \Hypertarget{classpm_1_1_vec_a6df07c4b41a36514f0b91972d44b3784}\label{classpm_1_1_vec_a6df07c4b41a36514f0b91972d44b3784} 
 \index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!Vec@{Vec}}
 \index{Vec@{Vec}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
-\doxysubsubsection{\texorpdfstring{Vec()}{Vec()}}
+\doxysubsubsection{\texorpdfstring{Vec()}{Vec()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 \mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$\+::\+Vec (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{components,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
 
@@ -51,6 +71,22 @@ Vector constructor that initializes the vector with the given components and siz
 {\em components} & -\/ Pointer to an array filled with numerical components.\\
 \hline
 {\em size} & -\/ Amount of compontents that user wants to hold in vector.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{classpm_1_1_vec_a9088c3f1ad980f1e791db5bb905ef051}\label{classpm_1_1_vec_a9088c3f1ad980f1e791db5bb905ef051} 
+\index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!Vec@{Vec}}
+\index{Vec@{Vec}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vec()}{Vec()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$\+::\+Vec (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpm_1_1_vec}{Vec}}$<$ T $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. It creates a new vector that is a copy of the given vector. WARNING\+: This constructor creates a deep copy of the vector. This means that the new vector will have its own array of components and destroying the older vector will not affect the new one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & -\/ Vector reference that will be used to copy data from.\\
 \hline
 \end{DoxyParams}
 
@@ -69,7 +105,7 @@ Function that returns the component of the vector at the given index.
 
 
 \begin{DoxyParams}{Parameters}
-{\em index} & -\/ index of component that will be returned (counting from 0).\\
+{\em index} & -\/ Index of component that will be returned (counting from 0).\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -89,6 +125,20 @@ Function that returns the pointer to the array of components of the vector.
 \begin{DoxyReturn}{Returns}
 Pointer to an array with components of vector.
 \end{DoxyReturn}
+\Hypertarget{classpm_1_1_vec_a469094acfcab6e405aad7cd8923c9514}\label{classpm_1_1_vec_a469094acfcab6e405aad7cd8923c9514} 
+\index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!getNormalized@{getNormalized}}
+\index{getNormalized@{getNormalized}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getNormalized()}{getNormalized()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$ \mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$\+::get\+Normalized}
+
+
+
+Function that returns the normalized vector. WARNING\+: This function does not change the vector itself. It returns a new vector that is normalized. If you want to normalize the vector itself, use the \doxylink{classpm_1_1_vec_a01e8be50727184524e503c95ee98f283}{normalize()} function. 
+
+\begin{DoxyReturn}{Returns}
+Normalized version of vector.
+\end{DoxyReturn}
 \Hypertarget{classpm_1_1_vec_a4a2fd0ff8cda7e8c3b8f41ac83160d3b}\label{classpm_1_1_vec_a4a2fd0ff8cda7e8c3b8f41ac83160d3b} 
 \index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!getSize@{getSize}}
 \index{getSize@{getSize}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
@@ -103,6 +153,96 @@ Function that returns the size of the vector (amount of dimensions).
 \begin{DoxyReturn}{Returns}
 Size of the vector.
 \end{DoxyReturn}
+\Hypertarget{classpm_1_1_vec_ad2798aa8e242d7091f22d04ffb8d2c3f}\label{classpm_1_1_vec_ad2798aa8e242d7091f22d04ffb8d2c3f} 
+\index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!magnitude@{magnitude}}
+\index{magnitude@{magnitude}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{magnitude()}{magnitude()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$\+::magnitude}
+
+
+
+Function that calculates the magnitude of the vector. 
+
+\begin{DoxyReturn}{Returns}
+Magnitude of vector.
+\end{DoxyReturn}
+\Hypertarget{classpm_1_1_vec_a415a664174520741d87266cdc830a1d4}\label{classpm_1_1_vec_a415a664174520741d87266cdc830a1d4} 
+\index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$ \mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const T \&}]{scalar }\end{DoxyParamCaption})}
+
+
+
+Operator that allows to multiply the vector by a scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & -\/ Scalar that will be used to multiply the vector.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of multiplication.
+\end{DoxyReturn}
+\Hypertarget{classpm_1_1_vec_ab24040f1e7b1dedbe1a4dfd78dd57c84}\label{classpm_1_1_vec_ab24040f1e7b1dedbe1a4dfd78dd57c84} 
+\index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$ \mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpm_1_1_vec}{Vec}}$<$ T $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Operator that allows to add two vectors together in a simple way. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & -\/ Second vector that will be used in addition.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of addition.
+\end{DoxyReturn}
+\Hypertarget{classpm_1_1_vec_aa80342dbe3c3f2e51bdc032ea981deee}\label{classpm_1_1_vec_aa80342dbe3c3f2e51bdc032ea981deee} 
+\index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$ \mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classpm_1_1_vec}{Vec}}$<$ T $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Operator that allows simple vector subtraction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & -\/ Vector that will be substracted.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of subtraction.
+\end{DoxyReturn}
+\Hypertarget{classpm_1_1_vec_acb62830ef75449586e8a37d25de67846}\label{classpm_1_1_vec_acb62830ef75449586e8a37d25de67846} 
+\index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$ \mbox{\hyperlink{classpm_1_1_vec}{pm\+::\+Vec}}$<$ T $>$\+::operator/ (\begin{DoxyParamCaption}\item[{const T \&}]{scalar }\end{DoxyParamCaption})}
+
+
+
+Operator that allows to divide the vector by a scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scalar} & -\/ Scalar that will be used to divide the vector.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of division.
+\end{DoxyReturn}
 \Hypertarget{classpm_1_1_vec_a4eab487f92e3f2a0b25708bc4c68178b}\label{classpm_1_1_vec_a4eab487f92e3f2a0b25708bc4c68178b} 
 \index{pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}!setComponent@{setComponent}}
 \index{setComponent@{setComponent}!pm::Vec$<$ T $>$@{pm::Vec$<$ T $>$}}
@@ -116,7 +256,7 @@ Function that sets the component of the vector at the given index to the given v
 
 
 \begin{DoxyParams}{Parameters}
-{\em index} & -\/ -\/ Index of component which will be changed.\\
+{\em index} & -\/ Index of component which will be changed.\\
 \hline
 {\em value} & Value that component at given index will be changed to.\\
 \hline

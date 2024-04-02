@@ -2,39 +2,83 @@
 \hypertarget{vec_8hpp_source}{}\label{vec_8hpp_source}\index{include/vec.hpp@{include/vec.hpp}}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
-\DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacepm}{pm}}\ }
-\DoxyCodeLine{00009\ \{}
-\DoxyCodeLine{00010\ \ \ \ \ }
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classpm_1_1_vec}{Vec}}}
-\DoxyCodeLine{00017\ \ \ \ \ \{}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpm_1_1_vec}{Vec}}(T*\ components,\ \textcolor{keywordtype}{size\_t}\ size);}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ T\ \mbox{\hyperlink{classpm_1_1_vec_a8483dffda3cefb5a60ce64258e64025a}{getComponent}}(\textcolor{keywordtype}{size\_t}\ index);}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ T*\ \mbox{\hyperlink{classpm_1_1_vec_aef4cd55d6538e9a18c07071e89e51d00}{getComponents}}();}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VEC\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VEC\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}globals.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacepm}{pm}}\ }
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classpm_1_1_vec}{Vec}}}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpm_1_1_vec}{Vec}}(T*\ components,\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpm_1_1_vec}{Vec}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classpm_1_1_vec}{Vec}}\&\ vec);}
 \DoxyCodeLine{00039\ }
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classpm_1_1_vec_a4a2fd0ff8cda7e8c3b8f41ac83160d3b}{getSize}}();}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classpm_1_1_vec_a4eab487f92e3f2a0b25708bc4c68178b}{setComponent}}(\textcolor{keywordtype}{size\_t}\ index,\ T\ value);}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classpm_1_1_vec_a767f0bfaa579cb52dfa3c41cfcce8ce6}{setComponents}}(T*\ components);}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpm_1_1_vec_afe062cbd263850c5f362b7208cd740e1}{\string~Vec}}();}
-\DoxyCodeLine{00065\ }
-\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ T*\ components;}
-\DoxyCodeLine{00072\ }
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ vecSize;}
-\DoxyCodeLine{00077\ \ \ \ \ \};}
-\DoxyCodeLine{00078\ }
-\DoxyCodeLine{00079\ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ T\ \mbox{\hyperlink{classpm_1_1_vec_a8483dffda3cefb5a60ce64258e64025a}{getComponent}}(\textcolor{keywordtype}{size\_t}\ index);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ T*\ \mbox{\hyperlink{classpm_1_1_vec_aef4cd55d6538e9a18c07071e89e51d00}{getComponents}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{classpm_1_1_vec_a4a2fd0ff8cda7e8c3b8f41ac83160d3b}{getSize}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classpm_1_1_vec_a4eab487f92e3f2a0b25708bc4c68178b}{setComponent}}(\textcolor{keywordtype}{size\_t}\ index,\ T\ value);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classpm_1_1_vec_a767f0bfaa579cb52dfa3c41cfcce8ce6}{setComponents}}(T*\ components);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ T\ \mbox{\hyperlink{classpm_1_1_vec_ad2798aa8e242d7091f22d04ffb8d2c3f}{magnitude}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classpm_1_1_vec_a01e8be50727184524e503c95ee98f283}{normalize}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpm_1_1_vec}{Vec}}\ \mbox{\hyperlink{classpm_1_1_vec_a469094acfcab6e405aad7cd8923c9514}{getNormalized}}();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpm_1_1_vec}{Vec}}\ \mbox{\hyperlink{classpm_1_1_vec_ab24040f1e7b1dedbe1a4dfd78dd57c84}{operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classpm_1_1_vec}{Vec}}\&\ vec);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpm_1_1_vec}{Vec}}\ \mbox{\hyperlink{classpm_1_1_vec_aa80342dbe3c3f2e51bdc032ea981deee}{operator-\/}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classpm_1_1_vec}{Vec}}\&\ vec);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpm_1_1_vec}{Vec}}\ \mbox{\hyperlink{classpm_1_1_vec_a415a664174520741d87266cdc830a1d4}{operator*}}(\textcolor{keyword}{const}\ T\&\ scalar);\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpm_1_1_vec}{Vec}}\ \mbox{\hyperlink{classpm_1_1_vec_acb62830ef75449586e8a37d25de67846}{operator/}}(\textcolor{keyword}{const}\ T\&\ scalar);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ print();}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpm_1_1_vec_afe062cbd263850c5f362b7208cd740e1}{\string~Vec}}();}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ T*\ components;}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ vecSize;}
+\DoxyCodeLine{00140\ \ \ \ \ \};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keyword}{namespace\ }vector}
+\DoxyCodeLine{00147\ \ \ \ \ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ T\ \mbox{\hyperlink{namespacepm_1_1vector_a4284143ed74521976495d636753a6aea}{dotProduct}}(\mbox{\hyperlink{classpm_1_1_vec}{Vec<T>}}\&\ vec1,\ \mbox{\hyperlink{classpm_1_1_vec}{Vec<T>}}\&\ vec2);}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpm_1_1_vec}{Vec<T>}}\ \mbox{\hyperlink{namespacepm_1_1vector_a0c78156690dea9186fe48342318884c5}{crossProduct}}(\mbox{\hyperlink{classpm_1_1_vec}{Vec<T>}}\&\ vec1,\ \mbox{\hyperlink{classpm_1_1_vec}{Vec<T>}}\&\ vec2);}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classpm_1_1_vec}{Vec<T>}}\ \mbox{\hyperlink{namespacepm_1_1vector_af03f91336c0e9906739cee88827cceda}{projection}}(\mbox{\hyperlink{classpm_1_1_vec}{Vec<T>}}\&\ vec1,\ \mbox{\hyperlink{classpm_1_1_vec}{Vec<T>}}\&\ vec2);}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{namespacepm_1_1vector_a0089a090af180c80ce7fd7e9a26fb717}{angle}}(\mbox{\hyperlink{classpm_1_1_vec}{Vec<T>}}\&\ vec1,\ \mbox{\hyperlink{classpm_1_1_vec}{Vec<T>}}\&\ vec2,\ pmEnum\ angleMode\ =\ PM\_RADIANS);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespacepm_1_1vector_aecb3b7dda44316814faa8444fb0ceb4e}{orthogonal}}(\mbox{\hyperlink{classpm_1_1_vec}{Vec<T>}}\&\ vec1,\ \mbox{\hyperlink{classpm_1_1_vec}{Vec<T>}}\&\ vec2);}
+\DoxyCodeLine{00198\ \ \ \ \ \}}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \}}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !VEC\_H}}
 
 \end{DoxyCode}

@@ -1,9 +1,9 @@
 var indexSectionsWithContent =
 {
-  0: "gpsv~",
-  1: "v",
+  0: "acdgmnopsv~",
+  1: "mv",
   2: "p",
-  3: "gsv~"
+  3: "acdgmnopsv~"
 };
 
 var indexSectionNames =

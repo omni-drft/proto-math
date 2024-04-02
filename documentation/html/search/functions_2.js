@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vec_0',['Vec',['../classpm_1_1_vec.html#a6df07c4b41a36514f0b91972d44b3784',1,'pm::Vec']]]
+  ['dotproduct_0',['dotProduct',['../namespacepm_1_1vector.html#a4284143ed74521976495d636753a6aea',1,'pm::vector']]]
 ];
