@@ -91,10 +91,10 @@
     <ClInclude Include="include\globals.hpp" />
     <ClInclude Include="include\pm.hpp" />
     <ClInclude Include="include\vec.hpp" />
-    <ClInclude Include="include\matrix.h" />
+    <ClInclude Include="include\mat.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\matrix.cpp" />
+    <ClCompile Include="src\mat.cpp" />
     <ClCompile Include="src\vec.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

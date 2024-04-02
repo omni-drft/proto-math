@@ -18,12 +18,12 @@
     <ClInclude Include="include\pm.hpp">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\matrix.h" />
+    <ClInclude Include="include\mat.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\vec.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\matrix.cpp" />
+    <ClCompile Include="src\mat.cpp" />
   </ItemGroup>
 </Project>
