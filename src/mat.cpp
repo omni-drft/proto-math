@@ -86,6 +86,44 @@ void pm::Mat<T>::print() const
 }
 
 template<typename T>
+pm::Mat<T> pm::Mat<T>::operator+(const Mat& other)
+{
+	if (n != other.n || m != other.m)
+		throw std::invalid_argument("Matrices must have the same dimensions.");
+
+	for (size_t i = 0; i < n; i++)
+		for (size_t j = 0; j < m; j++)
+			mat[i][j] += other.mat[i][j];
+}
+
+template<typename T>
+pm::Mat<T> pm::Mat<T>::operator-(const Mat& other)
+{
+	if (n != other.n || m != other.m)
+		throw std::invalid_argument("Matrices must have the same dimensions.");
+
+	for (size_t i = 0; i < n; i++)
+		for (size_t j = 0; j < m; j++)
+			mat[i][j] -= other.mat[i][j];
+}
+
+template<typename T>
+pm::Mat<T> pm::Mat<T>::operator*(const T& scalar)
+{
+	for (size_t i = 0; i < n; i++)
+		for (size_t j = 0; j < m; j++)
+			mat[i][j] *= scalar;
+}
+
+template<typename T>
+pm::Mat<T> pm::Mat<T>::operator/(const T& scalar)
+{
+	for (size_t i = 0; i < n; i++)
+		for (size_t j = 0; j < m; j++)
+			mat[i][j] /= scalar;
+}
+
+template<typename T>
 pm::Mat<T>::~Mat()
 {
 	for (size_t i = 0; i < n; i++)

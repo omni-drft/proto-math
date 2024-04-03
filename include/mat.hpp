@@ -84,6 +84,34 @@ namespace pm
 		void print() const;
 
 		/// <summary>
+		/// Operator that adds two matrices.
+		/// </summary>
+		/// <param name="other">- matrix that will be added to the current matrix</param>
+		/// <returns>- new matrix that is the result of the addition of the two matrices</returns>
+		Mat operator+(const Mat& other);
+
+		/// <summary>
+		/// Operator that subtracts two matrices.
+		/// </summary>
+		/// <param name="other">- matrix that will be subtracted from the current matrix</param>
+		/// <returns>- new matrix that is the result of the subtraction of the two matrices</returns>
+		Mat operator-(const Mat& other);
+
+		/// <summary>
+		/// Operator that multiplies two matrices.
+		/// </summary>
+		/// <param name="scalar">- scalar that will be multiplied with the matrix</param>
+		/// <returns>- new matrix that is the result of the multiplication of the matrix with the scalar</returns>
+		Mat operator*(const T& scalar);
+
+		/// <summary>
+		/// Operator that divides the matrix with a scalar.
+		/// </summary>
+		/// <param name="scalar">- scalar that will divide the matrix</param>
+		/// <returns>- new matrix that is the result of the division of the matrix with the scalar</returns>
+		Mat operator/(const T& scalar);
+
+		/// <summary>
 		/// Destructor that frees the memory allocated for the matrix.
 		/// </summary>
 		~Mat();
