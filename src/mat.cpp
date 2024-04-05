@@ -99,6 +99,18 @@ T pm::Mat<T>::det() const
 }
 
 template<typename T>
+pm::Mat<T> pm::Mat<T>::transpose()
+{
+	Mat<T> matr(m, n);
+
+	for (size_t i = 0; i < n; i++)
+		for (size_t j = 0; j < m; j++)
+			matr.mat[j][i] = mat[i][j];
+
+	return matr;
+}
+
+template<typename T>
 void pm::Mat<T>::print() const
 {
 	for (size_t i = 0; i < n; i++)

@@ -83,6 +83,12 @@ namespace pm
 		/// </summary>
 		/// <returns>- determinant of the matrix</returns>
 		T det() const;
+
+		/// <summary>
+		/// Method that transposes the matrix.
+		/// </summary>
+		/// <returns>- new matrix that is the transpose of the current matrix</returns>
+		Mat<T> transpose();
 		
 		/// <summary>
 		/// Method that prints the matrix.

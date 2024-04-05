@@ -21,7 +21,11 @@ int main()
 
 	pm::Mat<int> a(3, 3, mat);
 
-	std::cout << a.det() << std::endl;
+	pm::Mat<int> b{ a.transpose() };
+
+	a.print();
+	std::cout << std::endl;
+	b.print();
 
 	
 
