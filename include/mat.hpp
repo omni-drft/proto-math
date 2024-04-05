@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include "vec.hpp"
 
 namespace pm 
 {
@@ -115,6 +116,8 @@ namespace pm
 		/// <param name="scalar">- scalar that will be multiplied with the matrix</param>
 		/// <returns>- new matrix that is the result of the multiplication of the matrix with the scalar</returns>
 		Mat operator*(const T& scalar);
+
+		Mat operator*(const Vec<T>& vec);
 
 		/// <summary>
 		/// Operator that divides the matrix with a scalar.

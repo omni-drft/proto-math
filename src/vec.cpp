@@ -22,7 +22,7 @@ pm::Vec<T>::Vec(const Vec<T>& vec)
 }
 
 template<typename T>
-T pm::Vec<T>::getComponent(size_t index)
+T pm::Vec<T>::getComponent(size_t index) const
 {
 	if (index >= vecSize) // if index is out of range
 		throw std::out_of_range("ProtoMath: Index out of range");
@@ -31,14 +31,14 @@ T pm::Vec<T>::getComponent(size_t index)
 
 
 template<typename T>
-T* pm::Vec<T>::getComponents()
+T* pm::Vec<T>::getComponents() const 
 {
 	return components; // return pointer to the array of components
 }
 
 
 template<typename T>
-size_t pm::Vec<T>::getSize()
+size_t pm::Vec<T>::getSize() const
 {
 	return vecSize; // return size of the vector
 }

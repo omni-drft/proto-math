@@ -164,6 +164,25 @@ pm::Mat<T> pm::Mat<T>::operator*(const T& scalar)
 }
 
 template<typename T>
+pm::Mat<T> pm::Mat<T>::operator*(const Vec<T>& vec)
+{
+	if (m != vec.getSize())
+		throw std::invalid_argument("Vector and matrix dimensions do not match.");
+
+	Mat<T> matr(n, 1);
+
+	for (size_t i = 0; i < n; i++)
+	{
+		T sum{};
+		for (size_t j = 0; j < m; j++)
+			sum += mat[i][j] * vec.getComponent(j);
+		matr.setComponent(i, 0, sum);
+	}
+
+	return matr;
+}
+
+template<typename T>
 pm::Mat<T> pm::Mat<T>::operator/(const T& scalar)
 {
 

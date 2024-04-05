@@ -6,6 +6,7 @@
 
 #include "globals.hpp"
 
+
 /// <summary>
 /// The namespace that contains all the facilities of the ProtoMath library.
 /// </summary>
@@ -43,19 +44,19 @@ namespace pm
 		/// </summary>
 		/// <param name="index">- Index of component that will be returned (counting from 0).</param>
 		/// <returns>Component of vector at the given index.</returns>
-		T getComponent(size_t index);
+		T getComponent(size_t index) const;
 
 		/// <summary>
 		/// Function that returns the pointer to the array of components of the vector.
 		/// </summary>
 		/// <returns>Pointer to an array with components of vector.</returns>
-		T* getComponents();
+		T* getComponents() const;
 
 		/// <summary>
 		/// Function that returns the size of the vector (amount of dimensions).
 		/// </summary>
 		/// <returns>Size of the vector.</returns>
-		size_t getSize();
+		size_t getSize() const;
 
 		/// <summary>
 		/// Function that sets the component of the vector at the given index to the given value.
