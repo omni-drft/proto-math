@@ -75,6 +75,30 @@ void pm::Mat<T>::setMat(T** mat)
 }
 
 template<typename T>
+T pm::Mat<T>::det() const
+{
+	if (n != m)
+		throw std::invalid_argument("Matrix must be square.");
+
+	if (n == 1)
+		return mat[0][0];
+
+	double det{};
+
+	for (size_t i{}; i < n; i++)
+	{
+		Mat<T> subMat(n - 1, n - 1);
+		for (size_t j{}; j < n - 1; j++)
+			for (size_t k{}; k < n - 1; k++)
+				subMat.setComponent(j, k, mat[j + 1][k < i ? k : k + 1]);
+		det += (i % 2 == 0 ? 1 : -1) * mat[0][i] * subMat.det();
+	}
+
+	return det;
+
+}
+
+template<typename T>
 void pm::Mat<T>::print() const
 {
 	for (size_t i = 0; i < n; i++)
@@ -91,9 +115,13 @@ pm::Mat<T> pm::Mat<T>::operator+(const Mat& other)
 	if (n != other.n || m != other.m)
 		throw std::invalid_argument("Matrices must have the same dimensions.");
 
+	Mat<T> matr(*this);
+
 	for (size_t i = 0; i < n; i++)
 		for (size_t j = 0; j < m; j++)
-			mat[i][j] += other.mat[i][j];
+			matr.mat[i][j] += other.mat[i][j];
+	
+	return matr;
 }
 
 template<typename T>
@@ -102,25 +130,38 @@ pm::Mat<T> pm::Mat<T>::operator-(const Mat& other)
 	if (n != other.n || m != other.m)
 		throw std::invalid_argument("Matrices must have the same dimensions.");
 
+	Mat<T> matr(*this);
+
 	for (size_t i = 0; i < n; i++)
 		for (size_t j = 0; j < m; j++)
-			mat[i][j] -= other.mat[i][j];
+			matr.mat[i][j] -= other.mat[i][j];
+
+	return matr;
 }
 
 template<typename T>
 pm::Mat<T> pm::Mat<T>::operator*(const T& scalar)
 {
+	Mat<T> matr(this->n, this->m);
+
 	for (size_t i = 0; i < n; i++)
 		for (size_t j = 0; j < m; j++)
-			mat[i][j] *= scalar;
+			matr.mat[i][j] *= scalar;
+
+	return matr;
 }
 
 template<typename T>
 pm::Mat<T> pm::Mat<T>::operator/(const T& scalar)
 {
+
+	Mat<T> matr(*this);
+
 	for (size_t i = 0; i < n; i++)
 		for (size_t j = 0; j < m; j++)
-			mat[i][j] /= scalar;
+			matr.mat[i][j] /= scalar;
+
+	return matr;
 }
 
 template<typename T>

@@ -77,6 +77,12 @@ namespace pm
 		/// </summary>
 		/// <param name="mat">- 2D array that represents the matrix</param>
 		void setMat(T** mat);
+
+		/// <summary>
+		/// Method that calculates the determinant of the matrix.
+		/// </summary>
+		/// <returns>- determinant of the matrix</returns>
+		T det() const;
 		
 		/// <summary>
 		/// Method that prints the matrix.
