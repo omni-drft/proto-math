@@ -1,2 +1,2 @@
 # proto-math
-Multi-purpose C++ math library
+Multi-purpose C math library
