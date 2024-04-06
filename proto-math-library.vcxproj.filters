@@ -9,21 +9,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\globals.hpp">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="include\vec.hpp">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="include\pm.hpp">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="include\mat.hpp" />
+    <ClInclude Include="include\pm.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\vec.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\mat.cpp" />
+    <ClCompile Include="src\pm.c" />
   </ItemGroup>
 </Project>

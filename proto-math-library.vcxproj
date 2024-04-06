@@ -62,7 +62,6 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
     <Link>
@@ -79,7 +78,6 @@
       <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
     <Link>
@@ -88,14 +86,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\globals.hpp" />
-    <ClInclude Include="include\pm.hpp" />
-    <ClInclude Include="include\vec.hpp" />
-    <ClInclude Include="include\mat.hpp" />
+    <ClInclude Include="include\pm.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\mat.cpp" />
-    <ClCompile Include="src\vec.cpp" />
+    <ClCompile Include="src\pm.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

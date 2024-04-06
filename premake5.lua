@@ -5,11 +5,11 @@ workspace "proto-math"
 
 project "proto-math-library"
     kind "StaticLib"
-    language "C++"
-    cppdialect "C++17"
+    language "C"
+    cdialect "C99"
     targetdir "lib/%{cfg.buildcfg}"
     
-    files { "include/*.hpp", "src/*.cpp" }
+    files { "include/*.h", "src/*.c" }
 
     includedirs { "include" }
 
@@ -27,7 +27,7 @@ project "proto-math-tests"
     cppdialect "C++17"
     targetdir "test-bin/%{cfg.buildcfg}"
     
-    files { "tests/*.cpp" }
+    files { "tests/*.c" }
 
     includedirs { "include" }
 
