@@ -10,8 +10,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\pm.h" />
+    <ClInclude Include="include\vec.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\pm.c" />
+    <ClCompile Include="src\vec.c" />
   </ItemGroup>
 </Project>

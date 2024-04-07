@@ -87,8 +87,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\pm.h" />
+    <ClInclude Include="include\vec.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\vec.c" />
     <ClCompile Include="src\pm.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
