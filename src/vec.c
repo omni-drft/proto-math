@@ -123,12 +123,27 @@ struct pmVector3 pmVec3NormalizeCopy(struct pmVector3 vector)
 	return vector;
 }
 
-void pmVec3Print(struct pmVector3* vector, enum pmVectorEnum mode)
+void pmVec3Print(const struct pmVector3* vector, enum pmVectorEnum mode)
 {
 	// if the mode is set to pmCompact
-	if (!mode)
+	if (mode == pmCompact)
 		printf("[ %.2f, %.2f, %.2f ]", vector->components[0], vector->components[1], vector->components[2]);
 	// if the mode is set to pmFull
-	else 
+	else if (mode == pmFull)
 		printf("[ %f, %f, %f ]", vector->components[0], vector->components[1], vector->components[2]);
+}
+
+float pmVec3Angle(const struct pmVector3* vector1, const struct pmVector3* vector2, enum pmVectorEnum mode)
+{
+	// calculate the angle betwenn vectors in radians
+	float angle = acos((pmVec3DotProduct(vector1, vector2))/(pmVec3Length(vector1) * pmVec3Length(vector2)));
+	// if the mode is set to radians return the calculated angle
+	if (mode == pmRadians)
+		return angle;
+	// if the mode is set to degress convert the angle from radians to degrees and return result
+	else if (mode == pmDegrees)
+	{
+		double pi = 3.1415926535897932384626433;
+		return angle * (180 / pi);
+	}
 }
