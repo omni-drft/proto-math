@@ -1,0 +1,6 @@
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
+
+#define PM_PI 3.1415926535897932384626433
+
+#endif // CONSTANTS_H!

@@ -136,14 +136,11 @@ void pmVec3Print(const struct pmVector3* vector, enum pmVectorEnum mode)
 float pmVec3Angle(const struct pmVector3* vector1, const struct pmVector3* vector2, enum pmVectorEnum mode)
 {
 	// calculate the angle betwenn vectors in radians
-	float angle = acos((pmVec3DotProduct(vector1, vector2))/(pmVec3Length(vector1) * pmVec3Length(vector2)));
+	float angle = acos((pmVec3DotProduct(vector1, vector2)) / (pmVec3Length(vector1) * pmVec3Length(vector2)));
 	// if the mode is set to radians return the calculated angle
 	if (mode == pmRadians)
 		return angle;
 	// if the mode is set to degress convert the angle from radians to degrees and return result
 	else if (mode == pmDegrees)
-	{
-		double pi = 3.1415926535897932384626433;
-		return angle * (180 / pi);
-	}
+		return angle * (180 / PM_PI);
 }

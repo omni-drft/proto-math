@@ -11,6 +11,7 @@
   <ItemGroup>
     <ClInclude Include="include\pm.h" />
     <ClInclude Include="include\vec.h" />
+    <ClInclude Include="include\constants.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\pm.c" />

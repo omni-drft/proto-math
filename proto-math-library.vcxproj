@@ -86,6 +86,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\constants.h" />
     <ClInclude Include="include\pm.h" />
     <ClInclude Include="include\vec.h" />
   </ItemGroup>

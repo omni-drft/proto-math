@@ -3,6 +3,7 @@
 
 #include <math.h>
 #include <stdio.h>
+#include "constants.h"
 
 enum pmVectorEnum {
 	pmCompact,
