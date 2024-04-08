@@ -33,6 +33,13 @@
 *.out
 *.app
 
+# Visual Studio Solution files
+
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+*.sln
+
 # folders
 
 .vs/
