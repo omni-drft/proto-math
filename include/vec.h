@@ -72,4 +72,8 @@ void pmVec3Print(const struct pmVector3*, enum pmVectorEnum mode);
 // If the mode is set to pmDegrees the result is angle in degrees
 float pmVec3Angle(const struct pmVector3*, const struct pmVector3*, enum pmVectorEnum mode);
 
+// A function that calculates projection of first given vector onto another.
+// It returns new vector as a result.
+struct pmVector3 pmVec3Projection(const struct pmVector3*, const struct pmVector3*);
+
 #endif // VEC_H!

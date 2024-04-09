@@ -144,3 +144,17 @@ float pmVec3Angle(const struct pmVector3* vector1, const struct pmVector3* vecto
 	else if (mode == pmDegrees)
 		return angle * (180 / PM_PI);
 }
+
+struct pmVector3 pmVec3Projection(const struct pmVector3* vector1, const struct pmVector3* vector2)
+{
+	float dotProd = pmVec3DotProduct(vector1, vector2);
+	float bMag = pmVec3Length(vector2);
+	float scalar = dotProd / (bMag * bMag);
+
+	struct pmVector3 newVec;
+
+	for (int i = 0; i < 3; i++)
+		newVec.components[i] = vector1->components[i] * scalar;
+
+	return newVec;
+}
