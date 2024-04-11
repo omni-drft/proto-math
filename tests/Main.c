@@ -1,13 +1,10 @@
 #include <stdio.h>
 
 #include <pm.h>
-#include <vec.h>
+
 
 int main() 
 {
-	printf("C Test\n");
-	pmTest();
-	
 	
 	float testComponents[3] = { 2, 4, 5 };
 	struct pmVector3 test;

@@ -1,9 +1,8 @@
 #ifndef PM_H
 #define PM_H
 
-#include <stdio.h>
-
-void pmTest();
+#include "vec.h"
+#include "constants.h"
 
 #endif // !PM_H
 
