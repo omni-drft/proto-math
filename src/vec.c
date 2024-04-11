@@ -147,14 +147,36 @@ float pmVec3Angle(const struct pmVector3* vector1, const struct pmVector3* vecto
 
 struct pmVector3 pmVec3Projection(const struct pmVector3* vector1, const struct pmVector3* vector2)
 {
-	float dotProd = pmVec3DotProduct(vector1, vector2);
-	float bMag = pmVec3Length(vector2);
-	float scalar = dotProd / (bMag * bMag);
+	// Caluculate the scalar the the vector will be multiplied with
+	float scalar = pmVec3DotProduct(vector1, vector2) / (pmVec3Length(vector2) * pmVec3Length(vector2));
 
+	// Local struct that will be returned
 	struct pmVector3 newVec;
 
+	// Multiplying each component of vector
 	for (int i = 0; i < 3; i++)
 		newVec.components[i] = vector1->components[i] * scalar;
 
+	// Returning the calculated projection
 	return newVec;
+}
+
+unsigned int pmVec3IsParallel(const struct pmVector3* vector1, const struct pmVector3* vector2)
+{
+	// Parallelity condition
+	if (pmVec3DotProduct(vector1, vector2) == pmVec3Length(vector1) * pmVec3Length(vector2))
+		// if true then return 1
+		return 1;
+	// if false then return 0
+	return 0;
+}
+
+unsigned int pmVec3IsPerpendicular(const struct pmVector3* vector1, const struct pmVector3* vector2)
+{
+	// Perpendicularity condition
+	if (!pmVec3DotProduct(vector1, vector2))
+		// if dot product is 0 then return 1;
+		return 1;
+	// if dot product is other than 0 return 0;
+	return 0;		
 }

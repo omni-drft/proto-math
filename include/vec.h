@@ -3,6 +3,7 @@
 
 #include <math.h>
 #include <stdio.h>
+
 #include "constants.h"
 
 enum pmVectorEnum {
@@ -75,5 +76,17 @@ float pmVec3Angle(const struct pmVector3*, const struct pmVector3*, enum pmVecto
 // A function that calculates projection of first given vector onto another.
 // It returns new vector as a result.
 struct pmVector3 pmVec3Projection(const struct pmVector3*, const struct pmVector3*);
+
+// A function that checks if two given vectors are parallel to each other.
+// Returns:
+//	1 if they are parallel
+//  0 if they are not parallel
+unsigned int pmVec3IsParallel(const struct pmVector3*, const struct pmVector3*);
+
+// A function that checks if two given vectors are perpendicular to each other.
+// Returns:
+//  1 if they are perpendicular
+//  0 if they are not perpendicular
+unsigned int pmVec3IsPerpendicular(const struct pmVector3*, const struct pmVector3*);
 
 #endif // VEC_H!
