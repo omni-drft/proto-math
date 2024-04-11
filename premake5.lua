@@ -6,7 +6,7 @@ workspace "proto-math"
 project "proto-math-library"
     kind "StaticLib"
     language "C"
-    cdialect "C99"
+    cdialect "C90"
     targetdir "lib/%{cfg.buildcfg}"
     
     files { "include/*.h", "src/*.c" }
@@ -23,8 +23,8 @@ project "proto-math-library"
 
 project "proto-math-tests"
     kind "ConsoleApp"
-    language "C++"
-    cppdialect "C++17"
+    language "C"
+    cdialect "C90"
     targetdir "test-bin/%{cfg.buildcfg}"
     
     files { "tests/*.c" }
