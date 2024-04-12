@@ -1,4 +1,4 @@
-#include "vec.h"
+#include "pmVec3.h"
 
 unsigned int pmVec3Multiply(struct pmVector3* vector, float scalar)
 {

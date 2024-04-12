@@ -1,8 +1,8 @@
 #ifndef PM_H
 #define PM_H
 
-#include "vec.h"
-#include "constants.h"
+#include "pmVec3.h"
+#include "pmConstants.h"
 
 #endif // !PM_H
 

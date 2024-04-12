@@ -1,17 +1,9 @@
-#ifndef VEC_H
-#define VEC_H
+#ifndef PMVEC3_H
+#define PMVEC3_H
 
-#include <math.h>
 #include <stdio.h>
 
-#include "constants.h"
-
-enum pmVectorEnum {
-	pmCompact,
-	pmFull,
-	pmDegrees,
-	pmRadians
-};
+#include "pmConstants.h"
 
 // Proto Math structure for holding 3-component vectors and 
 // perform calculations on them. At the moment only floating 
@@ -89,4 +81,4 @@ unsigned int pmVec3IsParallel(const struct pmVector3*, const struct pmVector3*);
 //  0 if they are not perpendicular
 unsigned int pmVec3IsPerpendicular(const struct pmVector3*, const struct pmVector3*);
 
-#endif // VEC_H!
+#endif // PMVEC3_H!
