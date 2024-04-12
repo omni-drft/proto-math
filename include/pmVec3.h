@@ -4,6 +4,9 @@
 #include <stdio.h>
 
 #include "pmConstants.h"
+#include "pmTrigonometry.h"
+
+#include <math.h>
 
 // Proto Math structure for holding 3-component vectors and 
 // perform calculations on them. At the moment only floating 
@@ -30,9 +33,9 @@ struct pmVector3 pmVec3CrossProduct(const struct pmVector3*, const struct pmVect
 float pmVec3DotProduct(const struct pmVector3*, const struct pmVector3*);
 
 // Functions that are an alternative form of accessing coordinates.
-float x(const struct pmVector3*);
-float y(const struct pmVector3*);
-float z(const struct pmVector3*);
+float x(struct pmVector3*);
+float y(struct pmVector3*);
+float z(struct pmVector3*);
 
 
 // A function that calculates magnitude (length) of given

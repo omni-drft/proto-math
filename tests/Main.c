@@ -6,14 +6,19 @@
 int main() 
 {
 	
-	float testComponents[3] = { 2, 4, 5 };
-	struct pmVector3 test;
+	struct pmVector3 v1;
+	v1.components[0] = 1;
+	v1.components[1] = 2;
+	v1.components[2] = 3;
 
-	pmVec3Multiply(&test, 2.4f);
+	struct pmVector3 v2;
+	v2.components[0] = 4;
+	v2.components[1] = 5;
+	v2.components[2] = 6;
 
-	printf("[ %.2f, %.2f, %.2f ]\n", test.components[0], test.components[1], test.components[2]);
 
+	printf("%f", pmVec3Angle(&v1, &v2, pmRadians));
 
-
+	return 0;
 
 }
