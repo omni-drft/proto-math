@@ -31,7 +31,7 @@ struct pmVector3 pmVec3CrossProduct(const struct pmVector3*, const struct pmVect
 // vectors and returns it as float value.
 float pmVec3DotProduct(const struct pmVector3*, const struct pmVector3*);
 
-// Functions that are an alternative form of accessing coordinates.
+// Functions that are an alternative form of getting coordinates.
 float x(struct pmVector3*);
 float y(struct pmVector3*);
 float z(struct pmVector3*);

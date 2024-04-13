@@ -21,4 +21,16 @@ unsigned int pmVec4Multiply(struct pmVector4*, float);
 // by a scalar given as a 2nd argument.
 unsigned int pmVec4Divide(struct pmVector4*, float);
 
+// A function that calculates the dot product of two given
+// vectors and returns it as float value.
+float pmVec4DotProduct(const struct pmVector4*, const struct pmVector4*);
+
+// Functions that are an alternative form of getting coordinates.
+float x(const struct pmVector4*);
+float y(const struct pmVector4*);
+float z(const struct pmVector4*);
+float w(const struct pmVector4*);
+
+float pmVec4Length(const struct pmVector4*);
+
 #endif // !PMVEC4_H
