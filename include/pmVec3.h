@@ -4,7 +4,6 @@
 #include <stdio.h>
 
 #include "pmConstants.h"
-#include "pmTrigonometry.h"
 
 #include <math.h>
 

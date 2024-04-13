@@ -6,20 +6,19 @@
 int main() 
 {
 	
-	/*struct pmVector3 v1;
+	struct pmVector3 v1;
 	v1.components[0] = 1;
-	v1.components[1] = 2;
-	v1.components[2] = 3;
+	v1.components[1] = 1;
+	v1.components[2] = 1;
 
 	struct pmVector3 v2;
-	v2.components[0] = 4;
-	v2.components[1] = 5;
-	v2.components[2] = 6;
+	v2.components[0] = 1;
+	v2.components[1] = 2;
+	v2.components[2] = 1;
 
 
-	printf("%f", pmVec3Angle(&v1, &v2, pmRadians));*/
+	printf("%f", pmVec3Angle(&v1, &v2, pmDegrees));
 
-	printf("%f\n", pmArcCos(0.5, 20));
 
 	return 0;
 
