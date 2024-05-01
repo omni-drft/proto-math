@@ -32,14 +32,14 @@ struct pmVector3 pmVec3CrossProduct(const struct pmVector3*, const struct pmVect
 float pmVec3DotProduct(const struct pmVector3*, const struct pmVector3*);
 
 // Functions that are an alternative form of getting coordinates.
-float x(struct pmVector3*);
-float y(struct pmVector3*);
-float z(struct pmVector3*);
+float pmVec3x(const struct pmVector3*);
+float pmVec3y(const struct pmVector3*);
+float pmVec3z(const struct pmVector3*);
 
 
 // A function that calculates magnitude (length) of given
 // vector and returns it as float value.
-float pmVec3Length(struct pmVector3*);
+float pmVec3Length(const struct pmVector3*);
 
 // A function that normalizes vector under given address.\
 // WARNING!: It modifies the given vector

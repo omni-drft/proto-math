@@ -55,25 +55,25 @@ float pmVec3DotProduct(const struct pmVector3* vector1, const struct pmVector3* 
 		vector1->components[2] * vector2->components[2];
 }
 
-float x(const struct pmVector3* vector)
+float pmVec3x(const struct pmVector3* vector)
 {
 	// get first component
 	return vector->components[0];
 }
 
-float y(const struct pmVector3* vector)
+float pmVec3y(const struct pmVector3* vector)
 {
 	// get middle component
 	return vector->components[1];
 }
 
-float z(const struct pmVector3* vector)
+float pmVec3z(const struct pmVector3* vector)
 {
 	// get last component
 	return vector->components[2];
 }
 
-float pmVec3Length(struct pmVector3* vector)
+float pmVec3Length(const struct pmVector3* vector)
 {
 	float sum = 0;
 	// add all squared components to the sum
@@ -81,7 +81,7 @@ float pmVec3Length(struct pmVector3* vector)
 		sum += vector->components[i] * vector->components[i];
 
 	// return square root of sum
-	return sqrt(sum);
+	return (float)(sqrt(sum));
 }
 
 unsigned int pmVec3NormalizeInPlace(struct pmVector3* vector)
@@ -114,7 +114,8 @@ struct pmVector3 pmVec3NormalizeCopy(struct pmVector3 vector)
 	if (!length)
 	{
 		printf("ProtoMath Error!: Trying to divide vector by 0!\n");
-		return;
+		printf("Given vector returned...\n");
+		return vector;
 	}
 
 	// divide every component by the length of vector
@@ -142,14 +143,20 @@ float pmVec3Angle(const struct pmVector3* vector1, const struct pmVector3* vecto
 	pmVec3NormalizeInPlace(&v1);
 	pmVec3NormalizeInPlace(&v2);
 
-	float angle = acos(pmVec3DotProduct(&v1, &v2) / (pmVec3Length(&v1)) * pmVec3Length(&v2));
+	float angle = (float)(acos(pmVec3DotProduct(&v1, &v2) / (pmVec3Length(&v1)) * pmVec3Length(&v2)));
 
 	// if the mode is set to radians return the calculated angle
 	if (mode == pmRadians)
-		return angle;
+		return (float)angle;
 	// if the mode is set to degress convert the angle from radians to degrees and return result
 	else if (mode == pmDegrees)
-		return angle * (180 / PM_PI);
+		return (float)(angle * (180 / PM_PI));
+	else
+	{
+		printf("ProtoMath Error!: Wrong print mode.\n");
+		printf("Returning -1\n");
+		return -1;
+	}
 }
 
 struct pmVector3 pmVec3Projection(const struct pmVector3* vector1, const struct pmVector3* vector2)

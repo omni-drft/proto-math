@@ -33,22 +33,22 @@ float pmVec4DotProduct(const struct pmVector4* v1, const struct pmVector4* v2)
 		v1->components[3] * v2->components[3];
 }
 
-float x(const struct pmVector4* v)
+float pmVec4x(const struct pmVector4* v)
 {
 	return v->components[0];
 }
 
-float y(const struct pmVector4* v)
+float pmVec4y(const struct pmVector4* v)
 {
 	return v->components[1];
 }
 
-float z(const struct pmVector4* v)
+float pmVec4z(const struct pmVector4* v)
 {
 	return v->components[2];
 }
 
-float w(const struct pmVector4* v)
+float pmVec4w(const struct pmVector4* v)
 {
 	return v->components[3];
 }
@@ -61,7 +61,7 @@ float pmVec4Length(const struct pmVector4* v)
 		sum += v->components[i] * v->components[i];
 
 	// return square root of sum
-	return sqrt(sum);
+	return (float)(sqrt(sum));
 }
 
 unsigned int pmVec4NormalizeInPlace(struct pmVector4* v)
@@ -85,7 +85,8 @@ struct pmVector4 pmVec4NormalizeCopy(struct pmVector4 v)
 	if (!length)
 	{
 		printf("ProtoMath Error!: Trying to divide vector by 0!\n");
-		return;
+		printf("Returning given vector...\n");
+		return v;
 	}
 
 	for (int i = 0; i < 4; i++)
@@ -105,15 +106,16 @@ void pmVec4Print(const struct pmVector4* v, enum pmVectorEnum mode)
 
 float pmVec4Angle(const struct pmVector4* v1, const struct pmVector4* v2, enum pmVectorEnum mode)
 {
-	float angle = acos(pmVec4DotProduct(v1, v2) / (pmVec4Length(v1) * pmVec4Length(v1)));
+	float angle = (float)(acos(pmVec4DotProduct(v1, v2) / (pmVec4Length(v1) * pmVec4Length(v1))));
 	if (mode == pmRadians)
 		return angle;
 	else if (mode == pmDegrees)
-		return angle * (180.0 / PM_PI);
+		return (float)(angle * (180.0 / PM_PI));
 	else
 	{
 		printf("ProtoMath Error!: Wrong print mode.\n");
-		return;
+		printf("Returning -1\n");
+		return -1;
 	}
 }
 

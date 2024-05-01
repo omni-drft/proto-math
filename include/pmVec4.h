@@ -26,10 +26,10 @@ unsigned int pmVec4Divide(struct pmVector4*, float);
 float pmVec4DotProduct(const struct pmVector4*, const struct pmVector4*);
 
 // Functions that are an alternative form of getting coordinates.
-float x(const struct pmVector4*);
-float y(const struct pmVector4*);
-float z(const struct pmVector4*);
-float w(const struct pmVector4*);
+float pmVec4x(const struct pmVector4*);
+float pmVec4y(const struct pmVector4*);
+float pmVec4z(const struct pmVector4*);
+float pmVec4w(const struct pmVector4*);
 
 // A function that calculates vector length
 float pmVec4Length(const struct pmVector4*);
