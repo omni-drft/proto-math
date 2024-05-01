@@ -19,8 +19,11 @@ unsigned int pmMat3MultiplyIP(struct pmMatrix3*, float);
 struct pmMatrix3 pmMat3MultiplyCP(const struct pmMatrix3*, float);
 
 // A function that adds 2 matrices together and returns the result as 
-// a new struct.
+// matrix struct.
 struct pmMatrix3 pmMat3Add(const struct pmMatrix3*, const struct pmMatrix3*);
 
+// A function that subtracts 2nd given matrix from first given matrix and returns
+// the result as matrix struct.
+struct pmMatrix3 pmMat3Subtract(const struct pmMatrix3*, const struct pmMatrix3*);
 
 #endif // !PMMAT3_H
