@@ -16,7 +16,11 @@ unsigned int pmMat3MultiplyIP(struct pmMatrix3*, float);
 // A function that multiplies 3x3 matrix by a given scalar.
 // The matrix is passed as a pointer. The result is returned 
 // as a pmMatrix3 struct.
-struct pmMatrix3 pmMat3MultiplyCP(struct pmMatrix3*, float);
+struct pmMatrix3 pmMat3MultiplyCP(const struct pmMatrix3*, float);
+
+// A function that adds 2 matrices together and returns the result as 
+// a new struct.
+struct pmMatrix3 pmMat3Add(const struct pmMatrix3*, const struct pmMatrix3*);
 
 
 #endif // !PMMAT3_H
