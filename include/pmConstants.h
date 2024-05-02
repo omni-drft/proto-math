@@ -11,4 +11,4 @@ enum pmVectorEnum {
 	pmRadians
 };
 
-#endif // PMCONSTANTS_H!
+#endif /* PMCONSTANTS_H! */

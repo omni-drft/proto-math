@@ -7,5 +7,4 @@
 #include "pmMat3.h"
 
 
-#endif // !PM_H
-
+#endif /* !PM_H */

@@ -3,7 +3,7 @@ workspace "proto-math"
     configurations { "Release", "Debug" }
 
 
-project "proto-math-library"
+project "proto-math-static"
     kind "StaticLib"
     language "C"
     cdialect "C90"
@@ -21,6 +21,24 @@ project "proto-math-library"
         defines { "NDEBUG" }
         optimize "On"
 
+project "proto-math-dynamic"
+    kind "SharedLib"
+    language "C"
+    cdialect "C90"
+    targetdir "lib/%{cfg.buildcfg}"
+    
+    files { "include/*.h", "src/*.c" }
+
+    includedirs { "include" }
+
+    filter "configurations:Debug"
+        defines { "DEBUG" }
+        symbols "On"
+
+    filter "configurations:Release"
+        defines { "NDEBUG" }
+        optimize "On"
+        
 project "proto-math-tests"
     kind "ConsoleApp"
     language "C"
@@ -31,7 +49,7 @@ project "proto-math-tests"
 
     includedirs { "include" }
 
-    links { "proto-math-library" }
+    links { "proto-math-static" }
 
     filter "configurations:Debug"
         defines { "DEBUG" }
