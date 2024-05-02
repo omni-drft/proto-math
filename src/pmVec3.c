@@ -1,6 +1,6 @@
 #include "pmVec3.h"
 
-EXPORT_SYMBOL int pmVec3Multiply(struct pmVector3* vector, float scalar)
+EXPORT_SYMBOL unsigned int pmVec3Multiply(struct pmVector3* vector, float scalar)
 {
 	int i;
 	for (i = 0; i < 3; i++)
