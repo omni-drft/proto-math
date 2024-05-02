@@ -1,6 +1,6 @@
 #include "pmVec3.h"
 
-unsigned int pmVec3Multiply(struct pmVector3* vector, float scalar)
+EXPORT_SYMBOL int pmVec3Multiply(struct pmVector3* vector, float scalar)
 {
 	int i;
 	for (i = 0; i < 3; i++)
@@ -8,7 +8,7 @@ unsigned int pmVec3Multiply(struct pmVector3* vector, float scalar)
 	return 0;
 }
 
-unsigned int pmVec3Divide(struct pmVector3* vector, float scalar)
+EXPORT_SYMBOL unsigned int pmVec3Divide(struct pmVector3* vector, float scalar)
 {
 	if (!scalar)
 	{
@@ -21,7 +21,7 @@ unsigned int pmVec3Divide(struct pmVector3* vector, float scalar)
 	return 0;
 }
 
-struct pmVector3 pmVec3CrossProduct( const struct pmVector3* sourceVec1, const struct pmVector3* sourceVec2)
+EXPORT_SYMBOL struct pmVector3 pmVec3CrossProduct( const struct pmVector3* sourceVec1, const struct pmVector3* sourceVec2)
 {
 
 	struct pmVector3 destinationVec;
@@ -41,29 +41,29 @@ struct pmVector3 pmVec3CrossProduct( const struct pmVector3* sourceVec1, const s
 	return destinationVec;
 }
 
-float pmVec3DotProduct(const struct pmVector3* vector1, const struct pmVector3* vector2)
+EXPORT_SYMBOL float pmVec3DotProduct(const struct pmVector3* vector1, const struct pmVector3* vector2)
 {
 	return vector1->components[0] * vector2->components[0] +
 		vector1->components[1] * vector2->components[1] +
 		vector1->components[2] * vector2->components[2];
 }
 
-float pmVec3x(const struct pmVector3* vector)
+EXPORT_SYMBOL float pmVec3x(const struct pmVector3* vector)
 {
 	return vector->components[0];
 }
 
-float pmVec3y(const struct pmVector3* vector)
+EXPORT_SYMBOL float pmVec3y(const struct pmVector3* vector)
 {
 	return vector->components[1];
 }
 
-float pmVec3z(const struct pmVector3* vector)
+EXPORT_SYMBOL float pmVec3z(const struct pmVector3* vector)
 {
 	return vector->components[2];
 }
 
-float pmVec3Length(const struct pmVector3* vector)
+EXPORT_SYMBOL float pmVec3Length(const struct pmVector3* vector)
 {
 	float sum = 0;
 	int i;
@@ -73,7 +73,7 @@ float pmVec3Length(const struct pmVector3* vector)
 	return (float)(sqrt(sum));
 }
 
-unsigned int pmVec3NormalizeInPlace(struct pmVector3* vector)
+EXPORT_SYMBOL unsigned int pmVec3NormalizeInPlace(struct pmVector3* vector)
 {
 	float length = pmVec3Length(vector);
 
@@ -90,7 +90,7 @@ unsigned int pmVec3NormalizeInPlace(struct pmVector3* vector)
 
 }
 
-struct pmVector3 pmVec3NormalizeCopy(struct pmVector3 vector)
+EXPORT_SYMBOL struct pmVector3 pmVec3NormalizeCopy(struct pmVector3 vector)
 {
 	float length = pmVec3Length(&vector);
 
@@ -107,7 +107,7 @@ struct pmVector3 pmVec3NormalizeCopy(struct pmVector3 vector)
 	return vector;
 }
 
-void pmVec3Print(const struct pmVector3* vector, enum pmVectorEnum mode)
+EXPORT_SYMBOL void pmVec3Print(const struct pmVector3* vector, enum pmVectorEnum mode)
 {
 	if (mode == pmCompact)
 		printf("[ %.2f, %.2f, %.2f ]", vector->components[0], vector->components[1], vector->components[2]);
@@ -115,7 +115,7 @@ void pmVec3Print(const struct pmVector3* vector, enum pmVectorEnum mode)
 		printf("[ %f, %f, %f ]", vector->components[0], vector->components[1], vector->components[2]);
 }
 
-float pmVec3Angle(const struct pmVector3* vector1, const struct pmVector3* vector2, enum pmVectorEnum mode)
+EXPORT_SYMBOL float pmVec3Angle(const struct pmVector3* vector1, const struct pmVector3* vector2, enum pmVectorEnum mode)
 {
 
 	struct pmVector3 v1 = *vector1;
@@ -138,7 +138,7 @@ float pmVec3Angle(const struct pmVector3* vector1, const struct pmVector3* vecto
 	}
 }
 
-struct pmVector3 pmVec3Projection(const struct pmVector3* vector1, const struct pmVector3* vector2)
+EXPORT_SYMBOL struct pmVector3 pmVec3Projection(const struct pmVector3* vector1, const struct pmVector3* vector2)
 {
 	float scalar = pmVec3DotProduct(vector1, vector2) / (pmVec3Length(vector2) * pmVec3Length(vector2));
 
@@ -151,14 +151,14 @@ struct pmVector3 pmVec3Projection(const struct pmVector3* vector1, const struct 
 	return newVec;
 }
 
-unsigned int pmVec3IsParallel(const struct pmVector3* vector1, const struct pmVector3* vector2)
+EXPORT_SYMBOL unsigned int pmVec3IsParallel(const struct pmVector3* vector1, const struct pmVector3* vector2)
 {
 	if (pmVec3DotProduct(vector1, vector2) == pmVec3Length(vector1) * pmVec3Length(vector2))
 		return 1;
 	return 0;
 }
 
-unsigned int pmVec3IsPerpendicular(const struct pmVector3* vector1, const struct pmVector3* vector2)
+EXPORT_SYMBOL unsigned int pmVec3IsPerpendicular(const struct pmVector3* vector1, const struct pmVector3* vector2)
 {
 	if (!pmVec3DotProduct(vector1, vector2))
 		return 1;

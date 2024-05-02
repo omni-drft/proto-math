@@ -1,6 +1,6 @@
 #include "pmMat3.h"
 
-unsigned int pmMat3MultiplyIP(struct pmMatrix3* destinationMatrix, float scalar)
+EXPORT_SYMBOL unsigned int pmMat3MultiplyIP(struct pmMatrix3* destinationMatrix, float scalar)
 {
   int i, j;
 	for (i = 0; i < 3; i++)
@@ -9,7 +9,7 @@ unsigned int pmMat3MultiplyIP(struct pmMatrix3* destinationMatrix, float scalar)
 	return 0;
 }
 
-struct pmMatrix3 pmMat3MultiplyCP(const struct pmMatrix3* matrix, float scalar)
+EXPORT_SYMBOL struct pmMatrix3 pmMat3MultiplyCP(const struct pmMatrix3* matrix, float scalar)
 {
   struct pmMatrix3 result;
 	int i, j;
@@ -19,7 +19,7 @@ struct pmMatrix3 pmMat3MultiplyCP(const struct pmMatrix3* matrix, float scalar)
 	return result;
 }
 
-struct pmMatrix3 pmMat3Add(const struct pmMatrix3* mat1, const struct pmMatrix3* mat2)
+EXPORT_SYMBOL struct pmMatrix3 pmMat3Add(const struct pmMatrix3* mat1, const struct pmMatrix3* mat2)
 {
 	struct pmMatrix3 result;
 	int i, j;
@@ -29,7 +29,7 @@ struct pmMatrix3 pmMat3Add(const struct pmMatrix3* mat1, const struct pmMatrix3*
 	return result;
 }
 
-struct pmMatrix3 pmMat3Subtract(const struct pmMatrix3* mat1, const struct pmMatrix3* mat2)
+EXPORT_SYMBOL struct pmMatrix3 pmMat3Subtract(const struct pmMatrix3* mat1, const struct pmMatrix3* mat2)
 {
 	struct pmMatrix3 result;
 	int i, j;

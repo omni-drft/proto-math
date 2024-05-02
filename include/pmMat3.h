@@ -1,6 +1,8 @@
 #ifndef PMMAT3_H
 #define PMMAT3_H
 
+#include "pmConstants.h"
+
 /* Proto Math structure that represents 3x3 matrix and makes the library able
 to perform different matrix calculations. At the moment only floating 
 point components supported. */

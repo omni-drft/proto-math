@@ -3,6 +3,7 @@ workspace "proto-math"
     configurations { "Release", "Debug" }
 
 
+
 project "proto-math-static"
     kind "StaticLib"
     language "C"
@@ -20,6 +21,12 @@ project "proto-math-static"
     filter "configurations:Release"
         defines { "NDEBUG" }
         optimize "On"
+    filter "system:windows"
+        defines { "WIN32" }
+    filter "system:linux"
+        defines { "LINUX" }
+
+
 
 project "proto-math-dynamic"
     kind "SharedLib"
@@ -38,6 +45,13 @@ project "proto-math-dynamic"
     filter "configurations:Release"
         defines { "NDEBUG" }
         optimize "On"
+    filter "system:windows"
+        defines { "WIN32" }
+    filter "system:linux"
+        defines { "LINUX" }
+
+
+
         
 project "proto-math-tests"
     kind "ConsoleApp"
@@ -58,3 +72,7 @@ project "proto-math-tests"
     filter "configurations:Release"
         defines { "NDEBUG" }
         optimize "On"
+    filter "system:windows"
+        defines { "WIN32" }
+    filter "system:linux"
+        defines { "LINUX" }

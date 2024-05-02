@@ -1,6 +1,6 @@
 #include "pmVec4.h"
 
-unsigned int pmVec4Multiply(struct pmVector4* v, float scalar)
+EXPORT_SYMBOL unsigned int pmVec4Multiply(struct pmVector4* v, float scalar)
 {
 	int i;
 	for (i = 0; i < 4; i++)
@@ -8,7 +8,7 @@ unsigned int pmVec4Multiply(struct pmVector4* v, float scalar)
 	return 0;
 }
 
-unsigned int pmVec4Divide(struct pmVector4* v, float scalar)
+EXPORT_SYMBOL unsigned int pmVec4Divide(struct pmVector4* v, float scalar)
 {
 	if (!scalar)
 	{
@@ -21,7 +21,7 @@ unsigned int pmVec4Divide(struct pmVector4* v, float scalar)
 	return 0;
 }
 
-float pmVec4DotProduct(const struct pmVector4* v1, const struct pmVector4* v2)
+EXPORT_SYMBOL float pmVec4DotProduct(const struct pmVector4* v1, const struct pmVector4* v2)
 {
 	return v1->components[0] * v2->components[0] +
 		v1->components[1] * v2->components[1] +
@@ -29,27 +29,27 @@ float pmVec4DotProduct(const struct pmVector4* v1, const struct pmVector4* v2)
 		v1->components[3] * v2->components[3];
 }
 
-float pmVec4x(const struct pmVector4* v)
+EXPORT_SYMBOL float pmVec4x(const struct pmVector4* v)
 {
 	return v->components[0];
 }
 
-float pmVec4y(const struct pmVector4* v)
+EXPORT_SYMBOL float pmVec4y(const struct pmVector4* v)
 {
 	return v->components[1];
 }
 
-float pmVec4z(const struct pmVector4* v)
+EXPORT_SYMBOL float pmVec4z(const struct pmVector4* v)
 {
 	return v->components[2];
 }
 
-float pmVec4w(const struct pmVector4* v)
+EXPORT_SYMBOL float pmVec4w(const struct pmVector4* v)
 {
 	return v->components[3];
 }
 
-float pmVec4Length(const struct pmVector4* v)
+EXPORT_SYMBOL float pmVec4Length(const struct pmVector4* v)
 {
 	float sum = 0;
 	int i;
@@ -59,7 +59,7 @@ float pmVec4Length(const struct pmVector4* v)
 	return (float)(sqrt(sum));
 }
 
-unsigned int pmVec4NormalizeInPlace(struct pmVector4* v)
+EXPORT_SYMBOL unsigned int pmVec4NormalizeInPlace(struct pmVector4* v)
 {
 	float length = pmVec4Length(v);
 
@@ -75,7 +75,7 @@ unsigned int pmVec4NormalizeInPlace(struct pmVector4* v)
 	return 0;
 }
 
-struct pmVector4 pmVec4NormalizeCopy(struct pmVector4 v)
+EXPORT_SYMBOL struct pmVector4 pmVec4NormalizeCopy(struct pmVector4 v)
 {
 	float length = pmVec4Length(&v);
 	if (!length)
@@ -91,7 +91,7 @@ struct pmVector4 pmVec4NormalizeCopy(struct pmVector4 v)
 	return v;
 }
 
-void pmVec4Print(const struct pmVector4* v, enum pmVectorEnum mode)
+EXPORT_SYMBOL void pmVec4Print(const struct pmVector4* v, enum pmVectorEnum mode)
 {
 	if (mode == pmCompact)
 		printf("[ %.2f, %.2f, %.2f, %.2f ]", v->components[0], v->components[1], v->components[2], v->components[3]);
@@ -99,7 +99,7 @@ void pmVec4Print(const struct pmVector4* v, enum pmVectorEnum mode)
 		printf("[ %f, %f, %f, %f ]", v->components[0], v->components[1], v->components[2], v->components[3]);
 }
 
-float pmVec4Angle(const struct pmVector4* v1, const struct pmVector4* v2, enum pmVectorEnum mode)
+EXPORT_SYMBOL float pmVec4Angle(const struct pmVector4* v1, const struct pmVector4* v2, enum pmVectorEnum mode)
 {
 	float angle = (float)(acos(pmVec4DotProduct(v1, v2) / (pmVec4Length(v1) * pmVec4Length(v1))));
 	if (mode == pmRadians)
@@ -114,14 +114,14 @@ float pmVec4Angle(const struct pmVector4* v1, const struct pmVector4* v2, enum p
 	}
 }
 
-unsigned int pmVec4IsParallel(const struct pmVector4* v1, const struct pmVector4* v2)
+EXPORT_SYMBOL unsigned int pmVec4IsParallel(const struct pmVector4* v1, const struct pmVector4* v2)
 {
 	if (pmVec4DotProduct(v1, v2) == pmVec4Length(v1) * pmVec4Length(v2))
 		return 1;
 	return 0;
 }
 
-unsigned int pmVec4IsPerpendicular(const struct pmVector4* v1, const struct pmVector4* v2)
+EXPORT_SYMBOL unsigned int pmVec4IsPerpendicular(const struct pmVector4* v1, const struct pmVector4* v2)
 {
 	if (!pmVec4DotProduct(v1, v2))
 		return 1;
