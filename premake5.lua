@@ -1,5 +1,5 @@
 workspace "proto-math"
-    platforms { "x64" }
+    platforms { "x64", "x86" }
     configurations { "Release", "Debug" }
 
 
@@ -37,6 +37,8 @@ project "proto-math-dynamic"
     files { "include/*.h", "src/*.c" }
 
     includedirs { "include" }
+
+    defines { "SHARED_LIB" }
 
     filter "configurations:Debug"
         defines { "DEBUG" }
