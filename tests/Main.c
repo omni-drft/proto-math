@@ -31,6 +31,17 @@ int main()
 		printf("\n");
 	}
 
+	struct pmMatrix3 mat3 = {
+		{
+			{1, 2, 3},
+			{4, 5, 6},
+			{7, 8, 9}
+		}
+	};
+
+	float det = pmMat3Determinant(&mat3);
+	printf("\nDeterminant of mat3:  %f\n", det);
+
 
 	return 0;
 

@@ -32,4 +32,8 @@ struct pmMatrix3 pmMat3Subtract(const struct pmMatrix3*, const struct pmMatrix3*
 given matrix. WARNING: This function modifies first given matrix. */
 unsigned int pmMat3MultiplyByMatIP(struct pmMatrix3*, const struct pmMatrix3*);
 
+/* A function that calculates determinant of given 3x3 matrix and returns 
+it as floating point value. */
+float pmMat3Determinant(struct pmMatrix3*);
+
 #endif /* !PMMAT3_H */
