@@ -8,7 +8,7 @@ project "proto-math-static"
     kind "StaticLib"
     language "C"
     cdialect "C90"
-    targetdir "lib/%{cfg.buildcfg}"
+    targetdir "lib/%{cfg.buildcfg}/%{cfg.platform}"
     
     files { "include/*.h", "src/*.c" }
 
@@ -32,7 +32,7 @@ project "proto-math-dynamic"
     kind "SharedLib"
     language "C"
     cdialect "C90"
-    targetdir "lib/%{cfg.buildcfg}"
+    targetdir "lib/%{cfg.buildcfg}/%{cfg.platform}"
     
     files { "include/*.h", "src/*.c" }
 
