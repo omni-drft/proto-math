@@ -63,6 +63,28 @@ EXPORT_SYMBOL unsigned int pmMat3MultiplyByMatIP(struct pmMatrix3* mat1, const s
 	return 0;
 }
 
+struct pmMatrix3 pmMat3MultiplyByMatCP(const struct pmMatrix3* mat1, const struct  pmMatrix3* mat2);
+{
+    struct pmMatrix3 result;
+
+	int i, j, k;
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            result.components[i][j] = 0;
+        }
+    }
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            for (k = 0; k < 3; k++) {
+                result.components[i][j] += mat1->components[i][k] * mat2->components[k][j];
+            }
+        }
+    }
+
+	return result;
+}
+
 EXPORT_SYMBOL float pmMat3Determinant(const struct pmMatrix3* mat)
 {
     return 
