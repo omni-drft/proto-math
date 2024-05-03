@@ -42,6 +42,15 @@ int main()
 	float det = pmMat3Determinant(&mat3);
 	printf("\nDeterminant of mat3:  %f\n", det);
 
+	pmMat3TransposeIP(&mat3);
+
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 3; j++)
+			printf("%f ", mat3.components[i][j]);
+		printf("\n");
+	}
+
 
 	return 0;
 

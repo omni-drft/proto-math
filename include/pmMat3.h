@@ -34,6 +34,10 @@ unsigned int pmMat3MultiplyByMatIP(struct pmMatrix3*, const struct pmMatrix3*);
 
 /* A function that calculates determinant of given 3x3 matrix and returns 
 it as floating point value. */
-float pmMat3Determinant(struct pmMatrix3*);
+float pmMat3Determinant(const struct pmMatrix3*);
+
+/* A function that transposes the given matrix. 
+WARNING: This function modifies the given argument. */
+unsigned int pmMat3TransposeIP(struct pmMatrix3*);
 
 #endif /* !PMMAT3_H */
