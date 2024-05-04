@@ -155,4 +155,10 @@ EXPORT_SYMBOL struct pmMatrix3 pmMat3CofactorMatrix(const struct pmMatrix3* mat)
 	return cofMat;
 }
 
- 
+unsigned int pmMat3InvertIP(struct pmMatrix3* mat)
+{
+	struct pmMatrix3 cofMat = pmMat3CofactorMatrix(mat);
+	pmMat3TransposeIP(&cofMat);
+	*mat = pmMat3MultiplyByScalarCP(&cofMat, 1/pmMat3Determinant(mat));
+    return 0;
+}

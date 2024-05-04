@@ -53,4 +53,8 @@ unsigned int pmMat3TransposeIP(struct pmMatrix3*);
 and returns it as a 3x3 matrix struct. */
 struct pmMatrix3 pmMat3CofactorMatrix(const struct pmMatrix3*);
 
+/* A function that inverts given matrix. 
+WARNING: This function modifies given argument. */
+unsigned int pmMat3InvertIP(struct pmMatrix3*);
+
 #endif /* !PMMAT3_H */

@@ -60,6 +60,19 @@ int main()
 		printf("\n");
 	}
 
+	struct pmMatrix3 mat5 = {
+		{	
+			{0, -3, -2},
+			{1, -4, -2},
+			{-3, 4, 1}
+		}
+
+	};
+
+	pmMat3InvertIP(&mat5);
+
+	pmMat3Print(&mat5, pmCompact);
+
 	return 0;
 
 }
