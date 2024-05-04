@@ -48,7 +48,7 @@ struct pmVector4 pmVec4NormalizeCopy(struct pmVector4);
 It has two modes:
 	- pmCompact - a mode when the float values are displayed in short form
   - pmFull - a mode when the float values are displayed in their full form */
-void pmVec4Print(const struct pmVector4*, enum pmVectorEnum mode);
+void pmVec4Print(const struct pmVector4*, enum pmEnum);
 
 /* A function that calculates angle between two given vectors
 and returns result as a float value.
@@ -58,7 +58,7 @@ Two supported modes are:
 	 - pmDegrees
 If the mode is set to pmRadians the result is angle in radians
 If the mode is set to pmDegrees the result is angle in degrees */
-float pmVec4Angle(const struct pmVector4*, const struct pmVector4*, enum pmVectorEnum mode);
+float pmVec4Angle(const struct pmVector4*, const struct pmVector4*, enum pmEnum);
 
 /* A function that checks if two given vectors are parallel to each other.
 Returns:

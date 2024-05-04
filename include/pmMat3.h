@@ -1,6 +1,8 @@
 #ifndef PMMAT3_H
 #define PMMAT3_H
 
+#include <stdio.h>
+
 #include "pmConstants.h"
 
 /* Proto Math structure that represents 3x3 matrix and makes the library able
@@ -9,6 +11,9 @@ point components supported. */
 struct pmMatrix3 {
 	float components[3][3];
 };
+
+/* A function that prints the matrix in desired format. */
+unsigned int pmMat3Print(const struct pmMatrix3*, enum pmEnum);
 
 /* A function that multiplies 3x3 matrix by a given scalar.
 The matrix is passed as a pointer. Result is stored in the 

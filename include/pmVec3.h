@@ -54,7 +54,7 @@ struct pmVector3 pmVec3NormalizeCopy(struct pmVector3);
 It has two modes:
 	- pmCompact - a mode when the float values are displayed in short form
   - pmFull - a mode when the float values are displayed in their full form */
-void pmVec3Print(const struct pmVector3*, enum pmVectorEnum mode);
+void pmVec3Print(const struct pmVector3*, enum pmEnum);
 
 /* A function that calculates angle between two given vectors
 and returns result as a float value.
@@ -64,7 +64,7 @@ Two supported modes are:
 	 - pmDegrees
 If the mode is set to pmRadians the result is angle in radians
 If the mode is set to pmDegrees the result is angle in degrees */
-float pmVec3Angle(const struct pmVector3*, const struct pmVector3*, enum pmVectorEnum mode);
+float pmVec3Angle(const struct pmVector3*, const struct pmVector3*, enum pmEnum);
 
 /* A function that calculates projection of first given vector onto another.
 It returns new vector as a result. */

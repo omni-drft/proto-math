@@ -91,7 +91,7 @@ EXPORT_SYMBOL struct pmVector4 pmVec4NormalizeCopy(struct pmVector4 v)
 	return v;
 }
 
-EXPORT_SYMBOL void pmVec4Print(const struct pmVector4* v, enum pmVectorEnum mode)
+EXPORT_SYMBOL void pmVec4Print(const struct pmVector4* v, enum pmEnum mode)
 {
 	if (mode == pmCompact)
 		printf("[ %.2f, %.2f, %.2f, %.2f ]", v->components[0], v->components[1], v->components[2], v->components[3]);
@@ -99,7 +99,7 @@ EXPORT_SYMBOL void pmVec4Print(const struct pmVector4* v, enum pmVectorEnum mode
 		printf("[ %f, %f, %f, %f ]", v->components[0], v->components[1], v->components[2], v->components[3]);
 }
 
-EXPORT_SYMBOL float pmVec4Angle(const struct pmVector4* v1, const struct pmVector4* v2, enum pmVectorEnum mode)
+EXPORT_SYMBOL float pmVec4Angle(const struct pmVector4* v1, const struct pmVector4* v2, enum pmEnum mode)
 {
 	float angle = (float)(acos(pmVec4DotProduct(v1, v2) / (pmVec4Length(v1) * pmVec4Length(v1))));
 	if (mode == pmRadians)
