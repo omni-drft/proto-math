@@ -63,7 +63,7 @@ EXPORT_SYMBOL unsigned int pmMat3MultiplyByMatIP(struct pmMatrix3* mat1, const s
 	return 0;
 }
 
-struct pmMatrix3 pmMat3MultiplyByMatCP(const struct pmMatrix3* mat1, const struct  pmMatrix3* mat2);
+struct pmMatrix3 pmMat3MultiplyByMatCP(const struct pmMatrix3* mat1, const struct  pmMatrix3* mat2)
 {
     struct pmMatrix3 result;
 
@@ -104,3 +104,31 @@ EXPORT_SYMBOL unsigned int pmMat3TransposeIP(struct pmMatrix3* mat)
 	
 	return 0;
 }
+
+
+/* 
+			 0  1  2
+		  0 {1, 2, 3}
+		  1 {4, 5, 6}
+		  2 {7, 8, 9}
+*/
+EXPORT_SYMBOL struct pmMatrix3 pmMat3CofactorMatrix(const struct pmMatrix3* mat)
+{
+    struct pmMatrix3 cofMat;
+
+	cofMat.components[0][0] = (mat->components[1][1] * mat->components[2][2] - mat->components[1][2] * mat->components[2][1]);
+	cofMat.components[0][1] = -(mat->components[1][0] * mat->components[2][2] - mat->components[1][2] * mat->components[2][0]);
+	cofMat.components[0][2] = (mat->components[1][0] * mat->components[2][1] - mat->components[1][1] * mat->components[2][0]);
+
+	cofMat.components[1][0] = -(mat->components[0][1] * mat->components[2][2] - mat->components[0][2] * mat->components[2][1]);
+	cofMat.components[1][1] = (mat->components[0][0] * mat->components[2][2] - mat->components[0][2] * mat->components[2][0]);
+	cofMat.components[1][2] = -(mat->components[0][0] * mat->components[2][1] - mat->components[0][1] * mat->components[2][0]);
+	
+	cofMat.components[2][0] = (mat->components[0][1] * mat->components[1][2] - mat->components[0][2] * mat->components[1][1]);
+	cofMat.components[2][1] = -(mat->components[0][0] * mat->components[1][2] - mat->components[0][2] * mat->components[1][0]);
+	cofMat.components[2][2] = (mat->components[0][0] * mat->components[1][1] - mat->components[0][1] * mat->components[1][0]);
+
+	return cofMat;
+}
+
+ 

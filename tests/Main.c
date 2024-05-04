@@ -51,6 +51,14 @@ int main()
 		printf("\n");
 	}
 
+	struct pmMatrix3 mat4 = pmMat3CofactorMatrix(&mat3);
+
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 3; j++)
+			printf("%f ", mat4.components[i][j]);
+		printf("\n");
+	}
 
 	return 0;
 

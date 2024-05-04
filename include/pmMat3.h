@@ -44,4 +44,8 @@ float pmMat3Determinant(const struct pmMatrix3*);
 WARNING: This function modifies the given argument. */
 unsigned int pmMat3TransposeIP(struct pmMatrix3*);
 
+/* A function that calculates cofactor matrix of a given 3x3 matrix
+and returns it as a 3x3 matrix struct. */
+struct pmMatrix3 pmMat3CofactorMatrix(const struct pmMatrix3*);
+
 #endif /* !PMMAT3_H */
