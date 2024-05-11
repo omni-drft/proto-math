@@ -162,3 +162,8 @@ unsigned int pmMat3InvertIP(struct pmMatrix3* mat)
 	*mat = pmMat3MultiplyByScalarCP(&cofMat, 1/pmMat3Determinant(mat));
     return 0;
 }
+
+unsigned int pmMat3NumOfEigen(pmMatrix3 *)
+{
+    return 0;
+}

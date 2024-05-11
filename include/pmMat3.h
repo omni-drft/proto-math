@@ -57,4 +57,8 @@ struct pmMatrix3 pmMat3CofactorMatrix(const struct pmMatrix3*);
 WARNING: This function modifies given argument. */
 unsigned int pmMat3InvertIP(struct pmMatrix3*);
 
+/* A function that returns number of eigenvalues in
+given matrix */
+unsigned int pmMat3NumOfEigen(struct pmMatrix3*);
+
 #endif /* !PMMAT3_H */
