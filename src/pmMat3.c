@@ -155,7 +155,7 @@ EXPORT_SYMBOL struct pmMatrix3 pmMat3CofactorMatrix(const struct pmMatrix3* mat)
 	return cofMat;
 }
 
-unsigned int pmMat3InvertIP(struct pmMatrix3* mat)
+EXPORT_SYMBOL unsigned int pmMat3InvertIP(struct pmMatrix3* mat)
 {
 	struct pmMatrix3 cofMat = pmMat3CofactorMatrix(mat);
 	pmMat3TransposeIP(&cofMat);
@@ -163,7 +163,7 @@ unsigned int pmMat3InvertIP(struct pmMatrix3* mat)
     return 0;
 }
 
-unsigned int pmMat3NumOfEigen(pmMatrix3 *)
+EXPORT_SYMBOL unsigned int pmMat3NumOfEigen(struct pmMatrix3 * mat)
 {
     return 0;
 }
