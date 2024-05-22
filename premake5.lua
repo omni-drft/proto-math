@@ -59,7 +59,7 @@ project "proto-math-tests"
     kind "ConsoleApp"
     language "C"
     cdialect "C90"
-    targetdir "test-bin/%{cfg.buildcfg}"
+    targetdir "test-bin/%{cfg.buildcfg}/%{cfg.platform}"
     
     files { "tests/*.c" }
 

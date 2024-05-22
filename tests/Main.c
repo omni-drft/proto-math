@@ -6,7 +6,8 @@
 int main() 
 {
 	
-	printf("%Lf", pmSine(PM_PI / 2));
+	printf("%Lf\n", pmSine(PM_PI / 4));
+	printf("%Lf\n", pmCosine(PM_PI / 4));
 
 	return 0;
 
