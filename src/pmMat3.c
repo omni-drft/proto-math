@@ -174,13 +174,30 @@ EXPORT_SYMBOL float pmMat3Trace(const struct pmMatrix3* mat)
     return mat->components[0][0] + mat->components[1][1] + mat->components[2][2];
 }
 
-unsigned int pmMat3AdjugateIP(struct pmMatrix3* mat)
+EXPORT_SYMBOL unsigned int pmMat3AdjugateIP(struct pmMatrix3* mat)
 {
 	struct pmMatrix3 newMat = pmMat3CofactorMatrix(mat);
 
     pmMat3TransposeIP(&newMat);
 
 	*mat = newMat;
-	
+
 	return 0;
+}
+
+float pmMatFrobNorm(const struct pmMatrix3 * mat)
+{
+    return sqrt(
+		mat->components[0][0] * mat->components[0][0] + 
+		mat->components[0][1] * mat->components[0][1] + 
+		mat->components[0][2] * mat->components[0][2] +
+
+		mat->components[1][0] * mat->components[1][0] + 
+		mat->components[1][1] * mat->components[1][1] + 
+		mat->components[1][2] * mat->components[1][2] +
+
+		mat->components[2][0] * mat->components[2][0] + 
+		mat->components[2][1] * mat->components[2][1] + 
+		mat->components[2][2] * mat->components[2][2]
+	);
 }

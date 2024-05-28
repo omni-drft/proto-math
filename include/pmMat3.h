@@ -2,6 +2,7 @@
 #define PMMAT3_H
 
 #include <stdio.h>
+#include <math.h>
 
 #include "pmConstants.h"
 
@@ -68,5 +69,9 @@ float pmMat3Trace(const struct pmMatrix3*);
 /* A function that calculates Adj(A), where A is the given matrix. Result is 
 placed in the given argument. WARNING: This function modifies given matrix */
 unsigned int pmMat3AdjugateIP(struct pmMatrix3*);
+
+/* A function that cacluates Frobenius Norm of given matrix. 
+Result is returned as floating point value.*/
+float pmMatFrobNorm(const struct pmMatrix3*);
 
 #endif /* !PMMAT3_H */
