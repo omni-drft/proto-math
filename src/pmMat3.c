@@ -163,7 +163,13 @@ EXPORT_SYMBOL unsigned int pmMat3InvertIP(struct pmMatrix3* mat)
     return 0;
 }
 
-EXPORT_SYMBOL unsigned int pmMat3NumOfEigen(struct pmMatrix3 * mat)
+EXPORT_SYMBOL unsigned int pmMat3NumOfEigen(struct pmMatrix3* mat)
 {
+	/* FIXME: To be implemented later... */
     return 0;
+}
+
+EXPORT_SYMBOL float pmMat3Trace(const struct pmMatrix3* mat)
+{
+    return mat->components[0][0] + mat->components[1][1] + mat->components[2][2];
 }

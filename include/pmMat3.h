@@ -61,4 +61,8 @@ unsigned int pmMat3InvertIP(struct pmMatrix3*);
 given matrix */
 unsigned int pmMat3NumOfEigen(struct pmMatrix3*);
 
+/* A function that calculates tr(A), where A is the given matrix. 
+Result is returned as a floating point value. */
+float pmMat3Trace(const struct pmMatrix3*);
+
 #endif /* !PMMAT3_H */
