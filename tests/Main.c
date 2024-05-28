@@ -5,6 +5,6 @@
 
 int main() 
 {
+	printf("Testing ended.\n");
 	return 0;
-
 }
