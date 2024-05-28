@@ -65,4 +65,8 @@ unsigned int pmMat3NumOfEigen(struct pmMatrix3*);
 Result is returned as a floating point value. */
 float pmMat3Trace(const struct pmMatrix3*);
 
+/* A function that calculates Adj(A), where A is the given matrix. Result is 
+placed in the given argument. WARNING: This function modifies given matrix */
+unsigned int pmMat3AdjugateIP(struct pmMatrix3*);
+
 #endif /* !PMMAT3_H */
