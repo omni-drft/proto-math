@@ -146,7 +146,7 @@ EXPORT_SYMBOL struct pmVector3 pmVec3Projection(const struct pmVector3* vector1,
 
 	int i;
 	for (i = 0; i < 3; i++)
-		newVec.components[i] = vector1->components[i] * scalar;
+		newVec.components[i] = vector2->components[i] * scalar;
 
 	return newVec;
 }
