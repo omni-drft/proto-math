@@ -24,6 +24,7 @@ project "proto-math-static"
     filter "system:windows"
         defines { "WIN32" }
     filter "system:linux"
+    	links { "m" }
         defines { "LINUX" }
 
 
@@ -50,6 +51,7 @@ project "proto-math-dynamic"
     filter "system:windows"
         defines { "WIN32" }
     filter "system:linux"
+    	links { "m" }
         defines { "LINUX" }
 
 
@@ -77,4 +79,5 @@ project "proto-math-tests"
     filter "system:windows"
         defines { "WIN32" }
     filter "system:linux"
+    	links { "m" }
         defines { "LINUX" }

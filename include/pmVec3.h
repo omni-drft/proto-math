@@ -5,6 +5,7 @@
 
 #include "pmConstants.h"
 
+#include <stdlib.h>
 #include <math.h>
 
 /* Proto Math structure for holding 3-component vectors and 
