@@ -49,3 +49,6 @@ Makefile
 .vs/
 .vscode/
 obj/
+test-bin/
+lib/
+
