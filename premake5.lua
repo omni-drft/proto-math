@@ -9,6 +9,7 @@ project "proto-math-static"
     language "C"
     cdialect "C90"
     targetdir "lib/%{cfg.buildcfg}/%{cfg.platform}"
+    objdir "lib/obj/staticlib/%{cfg.buildcfg}/%{cfg.platform}"
     
     files { "include/*.h", "src/*.c" }
 
@@ -35,6 +36,7 @@ project "proto-math-dynamic"
     cdialect "C90"
     targetdir "lib/%{cfg.buildcfg}/%{cfg.platform}"
     
+    objdir "lib/obj/sharedlib/%{cfg.buildcfg}/%{cfg.platform}"
     files { "include/*.h", "src/*.c" }
 
     includedirs { "include" }
@@ -63,6 +65,7 @@ project "proto-math-tests"
     cdialect "C90"
     targetdir "test-bin/%{cfg.buildcfg}/%{cfg.platform}"
     
+    objdir "lib/obj/tests/%{cfg.buildcfg}/%{cfg.platform}"
     files { "tests/*.c" }
 
     includedirs { "include" }
