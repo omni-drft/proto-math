@@ -158,7 +158,30 @@ int main()
 	printf("%d out of 12 tests passed.\n", passed);
 
 	printf("\nPerforming 4-dimensional vector tests...\n");
+    
+    int passed2 = 0;
 
+    /*=========================== pmVec4Multiply ===================================*/
+
+    struct pmVector4 vec4_1 = {{1.0f, 1.0f, 1.0f}};
+    pmVec4Multiply(&vec4_1, 2);
+
+    if (vec4_1.components[0] == 2.0f && vec4_1.components[1] == 2.0f && vec4_1.components[2] == 2.0f)
+    {
+        printf("\tTest 1 passed.\n");
+        passed2++;
+    }
+    else
+        printf("\tTest 2 failed.\n");
+
+
+
+
+
+    
+    
+    printf("%d out of 12 tests passed.\n", passed2);
+    
 	printf("Testing ended.\n\n");
 	return 0;
 }
