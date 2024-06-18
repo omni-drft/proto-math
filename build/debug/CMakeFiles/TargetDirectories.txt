@@ -1,0 +1,5 @@
+/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug/CMakeFiles/proto-math-static.dir
+/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug/CMakeFiles/proto-math-dynamic.dir
+/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug/CMakeFiles/proto-math-tests.dir
+/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug/CMakeFiles/edit_cache.dir
+/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug/CMakeFiles/rebuild_cache.dir

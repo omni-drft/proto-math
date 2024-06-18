@@ -1,0 +1,2 @@
+/usr/bin/ar qc lib/Release/libproto-math-static.a "CMakeFiles/proto-math-static.dir/src/pmGeneral.c.o" "CMakeFiles/proto-math-static.dir/src/pmMat3.c.o" "CMakeFiles/proto-math-static.dir/src/pmTrigonometry.c.o" "CMakeFiles/proto-math-static.dir/src/pmVec3.c.o" "CMakeFiles/proto-math-static.dir/src/pmVec4.c.o"
+/usr/bin/ranlib lib/Release/libproto-math-static.a
