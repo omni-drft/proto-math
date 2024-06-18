@@ -1,0 +1,68 @@
+[
+{
+  "directory": "/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug",
+  "command": "/usr/bin/cc -DDEBUG -DLINUX -DNDEBUG -I/run/media/omnidrft/6166-3131/dev/C/proto-math/include -O3 -DNDEBUG -std=gnu90 -O3 -o CMakeFiles/proto-math-static.dir/src/pmGeneral.c.o -c /run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmGeneral.c",
+  "file": "/run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmGeneral.c",
+  "output": "CMakeFiles/proto-math-static.dir/src/pmGeneral.c.o"
+},
+{
+  "directory": "/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug",
+  "command": "/usr/bin/cc -DDEBUG -DLINUX -DNDEBUG -I/run/media/omnidrft/6166-3131/dev/C/proto-math/include -O3 -DNDEBUG -std=gnu90 -O3 -o CMakeFiles/proto-math-static.dir/src/pmMat3.c.o -c /run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmMat3.c",
+  "file": "/run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmMat3.c",
+  "output": "CMakeFiles/proto-math-static.dir/src/pmMat3.c.o"
+},
+{
+  "directory": "/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug",
+  "command": "/usr/bin/cc -DDEBUG -DLINUX -DNDEBUG -I/run/media/omnidrft/6166-3131/dev/C/proto-math/include -O3 -DNDEBUG -std=gnu90 -O3 -o CMakeFiles/proto-math-static.dir/src/pmTrigonometry.c.o -c /run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmTrigonometry.c",
+  "file": "/run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmTrigonometry.c",
+  "output": "CMakeFiles/proto-math-static.dir/src/pmTrigonometry.c.o"
+},
+{
+  "directory": "/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug",
+  "command": "/usr/bin/cc -DDEBUG -DLINUX -DNDEBUG -I/run/media/omnidrft/6166-3131/dev/C/proto-math/include -O3 -DNDEBUG -std=gnu90 -O3 -o CMakeFiles/proto-math-static.dir/src/pmVec3.c.o -c /run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmVec3.c",
+  "file": "/run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmVec3.c",
+  "output": "CMakeFiles/proto-math-static.dir/src/pmVec3.c.o"
+},
+{
+  "directory": "/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug",
+  "command": "/usr/bin/cc -DDEBUG -DLINUX -DNDEBUG -I/run/media/omnidrft/6166-3131/dev/C/proto-math/include -O3 -DNDEBUG -std=gnu90 -O3 -o CMakeFiles/proto-math-static.dir/src/pmVec4.c.o -c /run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmVec4.c",
+  "file": "/run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmVec4.c",
+  "output": "CMakeFiles/proto-math-static.dir/src/pmVec4.c.o"
+},
+{
+  "directory": "/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug",
+  "command": "/usr/bin/cc -DDEBUG -DLINUX -DNDEBUG -DSHARED_LIB -Dproto_math_dynamic_EXPORTS -I/run/media/omnidrft/6166-3131/dev/C/proto-math/include -O3 -DNDEBUG -std=gnu90 -fPIC -O3 -o CMakeFiles/proto-math-dynamic.dir/src/pmGeneral.c.o -c /run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmGeneral.c",
+  "file": "/run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmGeneral.c",
+  "output": "CMakeFiles/proto-math-dynamic.dir/src/pmGeneral.c.o"
+},
+{
+  "directory": "/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug",
+  "command": "/usr/bin/cc -DDEBUG -DLINUX -DNDEBUG -DSHARED_LIB -Dproto_math_dynamic_EXPORTS -I/run/media/omnidrft/6166-3131/dev/C/proto-math/include -O3 -DNDEBUG -std=gnu90 -fPIC -O3 -o CMakeFiles/proto-math-dynamic.dir/src/pmMat3.c.o -c /run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmMat3.c",
+  "file": "/run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmMat3.c",
+  "output": "CMakeFiles/proto-math-dynamic.dir/src/pmMat3.c.o"
+},
+{
+  "directory": "/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug",
+  "command": "/usr/bin/cc -DDEBUG -DLINUX -DNDEBUG -DSHARED_LIB -Dproto_math_dynamic_EXPORTS -I/run/media/omnidrft/6166-3131/dev/C/proto-math/include -O3 -DNDEBUG -std=gnu90 -fPIC -O3 -o CMakeFiles/proto-math-dynamic.dir/src/pmTrigonometry.c.o -c /run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmTrigonometry.c",
+  "file": "/run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmTrigonometry.c",
+  "output": "CMakeFiles/proto-math-dynamic.dir/src/pmTrigonometry.c.o"
+},
+{
+  "directory": "/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug",
+  "command": "/usr/bin/cc -DDEBUG -DLINUX -DNDEBUG -DSHARED_LIB -Dproto_math_dynamic_EXPORTS -I/run/media/omnidrft/6166-3131/dev/C/proto-math/include -O3 -DNDEBUG -std=gnu90 -fPIC -O3 -o CMakeFiles/proto-math-dynamic.dir/src/pmVec3.c.o -c /run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmVec3.c",
+  "file": "/run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmVec3.c",
+  "output": "CMakeFiles/proto-math-dynamic.dir/src/pmVec3.c.o"
+},
+{
+  "directory": "/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug",
+  "command": "/usr/bin/cc -DDEBUG -DLINUX -DNDEBUG -DSHARED_LIB -Dproto_math_dynamic_EXPORTS -I/run/media/omnidrft/6166-3131/dev/C/proto-math/include -O3 -DNDEBUG -std=gnu90 -fPIC -O3 -o CMakeFiles/proto-math-dynamic.dir/src/pmVec4.c.o -c /run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmVec4.c",
+  "file": "/run/media/omnidrft/6166-3131/dev/C/proto-math/src/pmVec4.c",
+  "output": "CMakeFiles/proto-math-dynamic.dir/src/pmVec4.c.o"
+},
+{
+  "directory": "/run/media/omnidrft/6166-3131/dev/C/proto-math/build/debug",
+  "command": "/usr/bin/cc -DDEBUG -DLINUX -DNDEBUG -I/run/media/omnidrft/6166-3131/dev/C/proto-math/include -O3 -DNDEBUG -std=gnu90 -O3 -o CMakeFiles/proto-math-tests.dir/tests/Main.c.o -c /run/media/omnidrft/6166-3131/dev/C/proto-math/tests/Main.c",
+  "file": "/run/media/omnidrft/6166-3131/dev/C/proto-math/tests/Main.c",
+  "output": "CMakeFiles/proto-math-tests.dir/tests/Main.c.o"
+}
+]

@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/proto-math-tests.dir/tests/Main.c.o" -o test-bin/proto-math-tests  lib/libproto-math-static.a -lm
